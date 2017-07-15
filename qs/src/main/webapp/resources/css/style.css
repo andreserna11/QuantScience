@@ -1,0 +1,164 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ nav ul a,
+ nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+.col-center{
+  margin: 30px auto 0px auto !important;
+  float: initial !important;
+}
+
+.contactLeft{
+  text-align: left;
+}
+
+.contactBackground{
+  background-color: rgba(242, 242, 242, 0.89);
+}
+
+.section-one-landing{  
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-landing{
+  height: 100vh !important;
+}
+
+/*<--- Paquetes*/
+
+.border-bottom-paquete{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.background-membresia{
+  background-color: rgba(242, 242, 242, 0.89);
+  padding-top: 56px;  
+}
+
+.background-table-tr{
+  background-color: white;
+}
+
+.cellContent{
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  line-height: 67px;
+  color: #fff;
+  text-align: center;    
+  cursor: pointer;
+  margin: 0px;
+  border: 2px;
+}
+
+.selborder{
+  margin: 4px;
+  background-color: #1976D2;
+}
+
+#opt3 {
+  border: 2px solid #1976D2;
+}
+
+#gratis {
+  opacity: 0.6;
+}
+
+#basico {
+  opacity: 0.6;
+}
+
+.op3 {
+  color: #1976D2;
+}
+
+.op1, .op2 {
+  opacity: 0.6;
+}
+
+.p-h-32{
+  padding: 0 32px !important;
+}
+
+.side-nav .collapsible-body li a{
+  font-size: 12px;
+}
+
+.dashboard header,
+.dashboard main,
+.dashboard footer {
+  padding-left: 300px;
+}
+
+.dashboard nav{
+  display: none;
+}
+
+.modalOlvidar{
+  max-height: 47%;
+}
+
+/*Paquetes----->*/
+
+@media only screen and (max-width : 992px) {
+  .dashboard header,
+  .dashboard main,
+  .dashboard footer {
+    padding-left: 0;
+  }
+  .dashboard nav{
+    display: block;
+  }
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
