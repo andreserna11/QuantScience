@@ -4,18 +4,17 @@
 	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<!-- 
+	
 	<security:http auto-config="true" use-expressions="true">
 		<security:intercept-url pattern="/" access="permitAll"/>
-		<security:intercept-url pattern="/*" access="permitAll"/>
-		<security:intercept-url pattern="/markers/*" access="permitAll"/>		
+		<security:intercept-url pattern="/*" access="permitAll"/>		
 		<security:form-login
 			default-target-url="/dashboard"
-			login-page="/login"
-			authentication-failure-url="/login?error"
+			login-page="/index"
+			authentication-failure-url="/index?error"
 			username-parameter="correo"
 			password-parameter="password"/>	
-		<security:logout logout-success-url="/login?logout"/>
+		<security:logout logout-success-url="/index?logout"/>
 		<security:access-denied-handler error-page="/403"/>		
 		<security:csrf disabled="true"/>
 	</security:http>
@@ -24,10 +23,9 @@
 		<security:authentication-provider>
 			<security:jdbc-user-service 
 				data-source-ref="dataSource" 
-				users-by-username-query='SELECT "UsuariosMarkers".correo, "UsuariosMarkers".clave, true FROM markersbd."UsuariosMarkers" WHERE "UsuariosMarkers".correo = ?'
-				authorities-by-username-query='SELECT correo, rolename FROM "markersbd"."Roles" WHERE correo = ?'/>	
+				users-by-username-query='SELECT "usuario".email, "usuario".clave, true FROM "qs"."usuario" WHERE "usuario".email = ?'
+				authorities-by-username-query='SELECT "usuario".email, "membresia".nombre FROM "qs"."usuario", "qs"."membresia" WHERE "usuario".membresia_id = "membresia".id AND "usuario".email = ?'/>	
 		</security:authentication-provider>
 	</security:authentication-manager>
-	 -->
-
+	
 </beans>
