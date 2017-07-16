@@ -39,7 +39,6 @@
         <li><a href="#contact_us" >Contáctanos</a></li>
         <li><a href="#loginModal" >Login</a></li>
       </ul>
-      </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
@@ -306,7 +305,7 @@
     <div class="divider"></div>
     <div class="col s12 valign">
       <form:form id="loginForm" name="loginForm" action="login" method="POST">
-        <!--<c:if test="${not empty error}">
+        <c:if test="${not empty error}">
           <div class="card-panel red lighten-1">
             <span class="white-text">${error}</span>
           </div>
@@ -320,7 +319,7 @@
           <div class="card-panel blue lighten-1">
             <span class="white-text">${alumnoAccess}</span>
           </div>
-        </c:if>-->
+        </c:if>
 
         <div class="row">
           <div class="input-field col s8 col-center">

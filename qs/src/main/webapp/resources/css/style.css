@@ -150,6 +150,15 @@ p {
   #index-banner .section {
     top: 0;
   }
+  .row .col.s2{
+    width: 33.3333333333%;
+  }
+  .row .col.s6{
+    width: 100%;
+  }
+  .cellContent{
+        width: 90px;
+  }
 }
 
 .icon-block {
