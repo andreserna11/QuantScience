@@ -1,25 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" session="true" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>QS - Cursos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>QS - Cursos</title>
 
-	<!-- CSS  -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link rel="shortcut icon" href="../img/favicon.ico" />
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="<c:url value='resources/css/materialize.css'/>" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="<c:url value='resources/css/style.css'/>" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="shortcut icon" href="<c:url value='resources/img/favicon.ico'/>"  />
 </head>
-<body class="dashboard">
+<body>
+	<body class="dashboard">
 
 	<ul id="slide-out" class="side-nav fixed">
 		<li>
 			<div class="user-view">
 				<div class="background">
-					<img src="../img/backgroud-1.jpg">
+					<img src="<c:url value='/resources/img/backgroud-1.jpg'/>">
 				</div>
-				<a><img class="circle grey darken-4" src="../img/Btc.png"></a>
+				<a><img class="circle grey darken-4" src="<c:url value='/resources/img/Btc.png'/>"></a>
 				<a><span class="white-text name">Carlos Andres</span></a>
 				<a><span class="white-text email">carlos_serna23151@elpoli.edu.co</span></a>
 			</div>
@@ -45,7 +50,7 @@
 		</li></ul> </li>
 		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE04B;</i>Trading en Vivo</a></li>
 		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE86E;</i>Blog</a></li>
-		<li><a class="waves-effect" href="../index.html"><i class="material-icons">&#xE879;</i>Cerrar Sesión</a></li>
+		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE879;</i>Cerrar Sesión</a></li>
 	</ul>
 	<nav>
 		<div class="nav-wrapper blue-grey darken-4">
@@ -54,9 +59,9 @@
     </nav>
 
 	<!--  Scripts-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
-	<script src="../js/init.js"></script>
+  	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  	<script src="<c:url value='/resources/js/materialize.js'/>"></script>
+  	<script src="<c:url value='/resources/js/init.js'/>"></script>
 
 </body>
 </html>

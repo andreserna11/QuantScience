@@ -16,4 +16,11 @@ public class MainController {
 		return model;
 	}
 	
+	@RequestMapping(value="/dashboard")
+	public ModelAndView dashboard(HttpServletRequest request){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("decorador/dashboard");
+		return model;
+	}
+	
 }
