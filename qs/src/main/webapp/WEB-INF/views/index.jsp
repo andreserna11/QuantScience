@@ -315,11 +315,6 @@
             <span class="white-text">${logoutMessage}</span>
           </div>
         </c:if>
-        <c:if test="${not empty alumnoAccess}">
-          <div class="card-panel blue lighten-1">
-            <span class="white-text">${alumnoAccess}</span>
-          </div>
-        </c:if>
 
         <div class="row">
           <div class="input-field col s8 col-center">
