@@ -2,13 +2,14 @@ package com.qs.services;
 
 import org.springframework.stereotype.Service;
 
-import com.qs.modelos.UsuariosQs;
+import com.qs.modelos.qs.usuario;
 
 @Service
 public class ServiceUsuarioImpl implements ServiceUsuario {
 
-	public UsuariosQs getUsuarioService(String correo) {
-		UsuariosQs user = new UsuariosQs();
+	public usuario getUsuarioService(String correo) {
+		usuario user = new usuario();
+		
 		
 		
 		

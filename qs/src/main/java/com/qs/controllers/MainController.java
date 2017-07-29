@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.qs.modelos.UsuariosQs;
+import com.qs.modelos.qs.usuario;
 import com.qs.services.ServiceUsuario;
 
 @Controller
@@ -30,7 +30,7 @@ public class MainController {
 		ModelAndView model = new ModelAndView();
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		
-		UsuariosQs user = serviceUsuario.getUsuarioService(auth.getName());
+		usuario user = serviceUsuario.getUsuarioService(auth.getName());
 		
 		model.setViewName("decorador/dashboard");
 		model.addObject("usuario",user);

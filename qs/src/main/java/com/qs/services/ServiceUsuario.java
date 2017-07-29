@@ -2,11 +2,11 @@ package com.qs.services;
 
 import org.springframework.stereotype.Service;
 
-import com.qs.modelos.UsuariosQs;
+import com.qs.modelos.qs.usuario;
 
 @Service
 public interface ServiceUsuario {
 	
-	public UsuariosQs getUsuarioService(String correo);
+	public usuario getUsuarioService(String correo);
 	
 }
