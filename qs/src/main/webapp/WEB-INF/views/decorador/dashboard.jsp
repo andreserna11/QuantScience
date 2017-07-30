@@ -24,8 +24,8 @@
 					<img src="<c:url value='/resources/img/backgroud-1.jpg'/>">
 				</div>
 				<a><img class="circle grey darken-4" src="<c:url value='/resources/img/Btc.png'/>"></a>
-				<a><span class="white-text name">Carlos Andres</span></a>
-				<a><span class="white-text email">carlos_serna23151@elpoli.edu.co</span></a>
+				<a><span class="white-text name">${usuario.getNombre()}</span></a>
+				<a><span class="white-text email">${usuario.getEmail()}</span></a>
 			</div>
 		</li>
 		<li><a class="waves-effect" href="#"><i class="material-icons">&#xE88A;</i>Dashboard</a></li>
