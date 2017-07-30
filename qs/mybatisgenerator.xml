@@ -4,7 +4,9 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
+
 	<classPathEntry location="C:\Users\Andres\Documents\Quantscience\Plataforma Cursos\postgresql-9.4.1209.jar" />
+
 	<!-- Generaremos para MyBatis versión 3 -->
 	<context id="postgres" targetRuntime="MyBatis3">
 
@@ -37,6 +39,22 @@
 		<table schema="qs" tableName="usuario" delimitIdentifiers="true" domainObjectName="usuario">
 			<property name="useActualColumnNames" value="true"/>
 			<generatedKey column="id" sqlStatement="select nextval ('qs.usuario_id_seq');"/>
+		</table>
+		 -->
+		 <!-- 
+		 <table schema="qs" tableName="membresia" delimitIdentifiers="true" domainObjectName="membresia">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="select nextval ('qs.membresia_id_seq');"/>
+		</table>
+		 -->
+		 <!-- 
+		 <table schema="qs" tableName="contenido" delimitIdentifiers="true" domainObjectName="contenido">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="select nextval ('qs.contenido_id_seq');"/>
+		</table>
+		<table schema="qs" tableName="membresia_contenido" delimitIdentifiers="true" domainObjectName="membresia_contenido">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="select nextval ('qs.membresia_contenido_id_seq');"/>
 		</table>
 		 -->
 	</context>

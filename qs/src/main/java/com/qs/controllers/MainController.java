@@ -13,7 +13,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.qs.modelos.qs.usuario;
+import com.qs.modelos.qs.membresia;
+import com.qs.modelos.qs.membresia_contenido;
+import com.qs.modelos.qs.contenido;
 import com.qs.services.ServiceUsuario;
+import com.qs.services.ServiceMembresia;
+import com.qs.services.ServiceMC;
+import com.qs.services.ServiceContenido;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
@@ -21,6 +30,15 @@ public class MainController {
 	
 	@Autowired
 	ServiceUsuario serviceUsuario;
+	
+	@Autowired
+	ServiceMembresia serviceMembresia;
+	
+	@Autowired
+	ServiceMC serviceMC;
+	
+	@Autowired
+	ServiceContenido serviceContenido;
 	
 	@RequestMapping(value={"/", "/index"})
 	public ModelAndView landing(HttpServletRequest request){
@@ -35,9 +53,23 @@ public class MainController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		
 		usuario user = serviceUsuario.getUsuarioService(auth.getName());
+		System.out.println(user.getMembresia_id() + " " + user.getTelefono());
+		membresia mem = serviceMembresia.getMembresiaService(user.getMembresia_id());
+		List<membresia_contenido> detalle = serviceMC.getMCService(user.getMembresia_id());
+		List<contenido> contenidos = new ArrayList<contenido>();
+		contenido con;
+		
+		
+		for(int i = 0;i < detalle.size();i++){
+			con = serviceContenido.getContenidoService(detalle.get(i).getContenido_id());
+			contenidos.add(con);
+		}
+		
 		
 		model.setViewName("decorador/dashboard");
 		model.addObject("usuario",user);
+		model.addObject("membresia",mem);
+		model.addObject("listaContenido", contenidos);
 		
 		return model;
 	}

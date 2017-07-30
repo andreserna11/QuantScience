@@ -25,7 +25,7 @@
 				</div>
 				<a><img class="circle grey darken-4" src="<c:url value='/resources/img/Btc.png'/>"></a>
 				<a><span class="white-text name">${usuario.getNombre()}</span></a>
-				<a><span class="white-text email">${usuario.getEmail()}</span></a>
+				<a><span class="white-text email">${usuario.getEmail()} - ${membresia.getNombre()}</span></a>
 			</div>
 		</li>
 		<li><a class="waves-effect" href="#"><i class="material-icons">&#xE88A;</i>Dashboard</a></li>
@@ -35,15 +35,10 @@
 		<a class="collapsible-header waves-effect p-h-32"><i class="material-icons">&#xE85C;</i>Entrenamiento</a>
 			<div class="collapsible-body">
 				<ul>
-					<li><a class="waves-effect" href="#!">Introducción al mercado de Cryptodivisas</a></li>
-					<li><a class="waves-effect" href="#!">Soportes y Resistencias</a></li>
-					<li><a class="waves-effect" href="#!">Operación en Vivo de Cryptodivisas</a></li>
-					<li><a class="waves-effect" href="#!">Introducción al análisis técnico</a></li>
-					<li><a class="waves-effect" href="#!">Acceso a la red social de Trading</a></li>
-					<li><a class="waves-effect" href="#!">Análisis fundamental de las Cryptodivisas</a></li>
-					<li><a class="waves-effect" href="#!">Money Management en Cryptodivisas</a></li>
-					<li><a class="waves-effect" href="#!">Patrones psicológicos del mercado</a></li>
-					<li><a class="waves-effect" href="#!">Conceptualización de la ICO de una cryptodivisa</a></li>
+					<c:forEach items="${listaContenido}" var="contenido">
+			                <li><a class="waves-effect" href="#!">${contenido.getTitulo()} - ${contenido.getRuta()}</a></li>
+			        </c:forEach>
+					
 				</ul>
 			</div>
 		</li></ul> </li>
