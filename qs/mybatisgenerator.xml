@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<classPathEntry location="C:\Users\jarbo\Documents\postgresql-42.0.0.jar" />
+	<classPathEntry location="C:\Users\Andres\Documents\Quantscience\Plataforma Cursos\postgresql-9.4.1209.jar" />
 	<!-- Generaremos para MyBatis versión 3 -->
 	<context id="postgres" targetRuntime="MyBatis3">
 
