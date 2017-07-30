@@ -40,6 +40,5 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.qs.dao" />
 	</bean>
->>>>>>> 01d2b51ffb6001c7d369a276e800ccb673afe395
 	
 </beans>
