@@ -146,7 +146,7 @@
         <div class="cellContent" id="opt3" onclick="opt3(); check3()">
           <div class="selborder" id="avanzado">
             Avanzado
-            <input type="radio" name="membership" value="3" id="v3" form="form1">
+            <input type="radio" name="membership" value="3" id="v3" form="form1" checked>
           </div>
         </div>
       </div>
@@ -363,40 +363,38 @@
           <div class="section">
       <div class="row">
         <div class="col s12 center">
-          <form>
             <div class="row">
               <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="nombreContact" type="text" class="validate">
-                <label for="nombreContact">Nombre</label>
+                <input id="nombreRegister" type="text" class="validate">
+                <label for="nombreRegister">Nombre</label>
               </div>                    
               <div class="input-field col s6">
                 <i class="material-icons prefix">phone</i>
-                <input id="telefonoContact" type="text" class="validate">
-                <label for="telefonoContact">Teléfono</label>
+                <input id="telefonoRegister" type="text" class="validate">
+                <label for="telefonoRegister">Teléfono</label>
               </div>
               <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
-                <input id="emailContact" type="email" class="validate">
-                 <label for="emailContact" data-error="Error">Email</label>
+                <input id="emailRegister" type="email" class="validate">
+                 <label for="emailRegister" data-error="Error">Email</label>
               </div>                      
               <div class="input-field col s6">
                 <i class="material-icons prefix">&#xE0DA;</i>
-                <input id="contrasena" type="password" class="validate">
-                <label for="mensajeContact">Contraseña</label>
+                <input id="contrasenaRegister" type="password" class="validate">
+                <label for="contrasenaRegister">Contraseña</label>
               </div>
               <div class="input-field col s6">
                 <i class="material-icons prefix">&#xE0DA;</i>
-                <input id="contrasena2" type="password" class="validate">
-                <label for="mensajeContact">Repetir contraseña</label>
+                <input id="contrasena2Register" type="password" class="validate">
+                <label for="contrasena2Register">Repetir contraseña</label>
               </div>
             </div>
             <div class="row">
-                <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Registrarse
+                <button id="btnRegistrar" class="btn waves-effect waves-light blue darken-2">Registrarse
                   <i class="material-icons right">send</i>
                 </button>
             </div>
-          </form>          
         </div>
       </div>
     </div>
@@ -444,6 +442,7 @@
   <script src="<c:url value='/resources/js/materialize.js'/>"></script>
   <script src="<c:url value='/resources/js/init.js'/>"></script>
   <script src="<c:url value='/resources/js/membresia.js'/>"></script>
-
+  <script src="<c:url value='/resources/js/index.js'/>"></script>
+  
   </body>
 </html>

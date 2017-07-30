@@ -7,7 +7,7 @@
     }
 
     function opt1(){
-      document.getElementById("opt1").style.border = "2px solid #1976D2";
+      $("#opt1").css({"border": "2px solid #1976D2"});
       document.getElementById("opt2").style.border = "2px";
       document.getElementById("opt3").style.border = "2px";
 
@@ -49,7 +49,7 @@
       
     }
     function check1(){
-      document.getElementById("v1").checked = true;
+      $("#v1").prop('checked', true);
     }
     function check2(){
       document.getElementById("v2").checked = true;
