@@ -38,6 +38,6 @@
 			<property name="useActualColumnNames" value="true"/>
 			<generatedKey column="id" sqlStatement="select nextval ('qs.usuario_id_seq');"/>
 		</table>
-		-->
+		 -->
 	</context>
 </generatorConfiguration>
