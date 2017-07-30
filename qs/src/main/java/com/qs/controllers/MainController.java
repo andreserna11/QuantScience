@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.qs.modelos.qs.usuario;
 import com.qs.services.ServiceUsuario;
 
-import net.sf.json.JSONObject;
 
 @Controller
 public class MainController {

@@ -126,6 +126,10 @@ p {
   max-height: 47%;
 }
 
+.modal-scroll{
+	height: 75% !important;
+	max-height: 75% !important;
+}
 /*Paquetes----->*/
 
 @media only screen and (max-width : 992px) {

@@ -58,7 +58,7 @@
           <h2 class="header col s12 light">"ENTRENAMIENTO DE INVERSIÓN EN CRYPTOMONEDAS"</h2>
         </div>
         <div class="row center">
-          <a href="#loginModal" id="download-button" class="waves-effect waves-light btn blue darken-2">Entrenamiento <b>GRATIS</b></a>
+          <a href="#Membresias" id="download-button" class="waves-effect waves-light btn blue darken-2">Entrenamiento <b>GRATIS</b></a>
         </div>
         <br><br>
 
@@ -124,6 +124,9 @@
 <section id="Membresias" class="background-membresia">
   <form id="form1" method="POST" action="/comprar"></form>
   <div class="container">
+  	<div class="row">
+  		<h4 class="center">Selecciona tu membresía.</h4>
+  	</div>
     <div class="row">
       <div class="col s6"></div>
       <div class="col s2 center">
@@ -222,7 +225,7 @@
     </div> 
   </div>
   <div class="row center">
-   <button class="waves-effect waves-light btn blue darken-2" form="form1">Continuar</button>
+   <a href="#registroModal" id="download-button" class="waves-effect waves-light btn blue darken-2">Continuar</a>
   </div>
 </section>
 
@@ -356,7 +359,7 @@
   </div>
 </div>
 
-<div id="registroModal" class="modal modal-fixed-footer">
+<div id="registroModal" class="modal modal-fixed-footer modal-scroll">
     <div class="modal-content">
       <h4 class="grey-text text-darken-2 center">¡Regístrate!</h4>
       <div class="divider"></div>
@@ -366,27 +369,32 @@
             <div class="row">
               <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="nombreRegister" type="text" class="validate">
+                <input id="nombreRegister" type="text" class="validate" required>
                 <label for="nombreRegister">Nombre</label>
-              </div>                    
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="apellidoRegister" type="text" class="validate">
+                <label for="apellidoRegister">Apellidos</label>
+              </div>                     
               <div class="input-field col s6">
                 <i class="material-icons prefix">phone</i>
-                <input id="telefonoRegister" type="text" class="validate">
+                <input id="telefonoRegister" type="text" class="validate" required>
                 <label for="telefonoRegister">Teléfono</label>
               </div>
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                 <i class="material-icons prefix">email</i>
-                <input id="emailRegister" type="email" class="validate">
+                <input id="emailRegister" type="email" class="validate" required>
                  <label for="emailRegister" data-error="Error">Email</label>
               </div>                      
               <div class="input-field col s6">
                 <i class="material-icons prefix">&#xE0DA;</i>
-                <input id="contrasenaRegister" type="password" class="validate">
+                <input id="contrasenaRegister" type="password" class="validate" required>
                 <label for="contrasenaRegister">Contraseña</label>
               </div>
               <div class="input-field col s6">
                 <i class="material-icons prefix">&#xE0DA;</i>
-                <input id="contrasena2Register" type="password" class="validate">
+                <input id="contrasena2Register" type="password" class="validate" required>
                 <label for="contrasena2Register">Repetir contraseña</label>
               </div>
             </div>
