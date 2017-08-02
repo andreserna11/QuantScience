@@ -5,7 +5,7 @@ $('#btnRegistrar').on('click', function() {
 function registarUsuario() {
 	var usuario = {
 		"nombre" : $('#nombreRegister').val(),
-		"apellidos" : $('#nombreRegister').val(),
+		"apellidos" : $('#apellidoRegister').val(),
 		"telefono" : $('#telefonoRegister').val(),
 		"email" : $('#emailRegister').val(),
 		"clave" : $('#contrasenaRegister').val(),

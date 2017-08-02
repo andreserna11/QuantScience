@@ -67,6 +67,10 @@ p {
   background-color: white;
 }
 
+.back-icon{
+	font-size: 2.28rem;
+}
+
 .cellContent{
   display: inline-block;
   width: 120px;
@@ -79,6 +83,17 @@ p {
   border: 2px;
 }
 
+.cellContentModal {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 67px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin: 0px;
+    border: 2px;
+}
 .selborder{
   margin: 4px;
   background-color: #1976D2;
@@ -126,7 +141,20 @@ p {
   max-height: 47%;
 }
 
+.modal-scroll{
+	height: 75% !important;
+	max-height: 75% !important;
+}
 /*Paquetes----->*/
+
+/* Dashboard*/
+
+.container-dasboard{
+	margin-left: 311px;
+    width: auto;
+    max-width: initial;
+}
+/* Fin - Dashboard*/
 
 @media only screen and (max-width : 992px) {
   .dashboard header,
