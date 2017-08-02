@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface membresiaMapper {
-    long countByExample(membresiaExample example);
+    int countByExample(membresiaExample example);
 
     int deleteByExample(membresiaExample example);
 

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.qs.dao.qs.contenidoMapper" >
-  <resultMap id="BaseResultMap" type="com.qs.modelos.qs.contenido" >
+<mapper namespace="com.qs.dao.qs.multimediaMapper" >
+  <resultMap id="BaseResultMap" type="com.qs.modelos.qs.multimedia" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="titulo" property="titulo" jdbcType="VARCHAR" />
+    <result column="nombre" property="nombre" jdbcType="CHAR" />
+    <result column="ruta" property="ruta" jdbcType="CHAR" />
+    <result column="id_contenido" property="id_contenido" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -64,15 +66,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, titulo
+    id, nombre, ruta, id_contenido
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.contenidoExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.multimediaExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from "qs"."contenido"
+    from "qs"."multimedia"
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -83,58 +85,78 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from "qs"."contenido"
+    from "qs"."multimedia"
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from "qs"."contenido"
+    delete from "qs"."multimedia"
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.qs.modelos.qs.contenidoExample" >
-    delete from "qs"."contenido"
+  <delete id="deleteByExample" parameterType="com.qs.modelos.qs.multimediaExample" >
+    delete from "qs"."multimedia"
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.qs.modelos.qs.contenido" >
+  <insert id="insert" parameterType="com.qs.modelos.qs.multimedia" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
-      select nextval ('qs.contenido_id_seq');
+      select nextval ('qs.multimedia_id_seq');
     </selectKey>
-    insert into "qs"."contenido" (id, titulo)
-    values (#{id,jdbcType=INTEGER}, #{titulo,jdbcType=VARCHAR})
+    insert into "qs"."multimedia" (id, nombre, ruta, id_contenido
+      )
+    values (#{id,jdbcType=INTEGER}, #{nombre,jdbcType=CHAR}, #{ruta,jdbcType=CHAR}, #{id_contenido,jdbcType=INTEGER}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.qs.modelos.qs.contenido" >
+  <insert id="insertSelective" parameterType="com.qs.modelos.qs.multimedia" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
-      select nextval ('qs.contenido_id_seq');
+      select nextval ('qs.multimedia_id_seq');
     </selectKey>
-    insert into "qs"."contenido"
+    insert into "qs"."multimedia"
     <trim prefix="(" suffix=")" suffixOverrides="," >
       id,
-      <if test="titulo != null" >
-        titulo,
+      <if test="nombre != null" >
+        nombre,
+      </if>
+      <if test="ruta != null" >
+        ruta,
+      </if>
+      <if test="id_contenido != null" >
+        id_contenido,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       #{id,jdbcType=INTEGER},
-      <if test="titulo != null" >
-        #{titulo,jdbcType=VARCHAR},
+      <if test="nombre != null" >
+        #{nombre,jdbcType=CHAR},
+      </if>
+      <if test="ruta != null" >
+        #{ruta,jdbcType=CHAR},
+      </if>
+      <if test="id_contenido != null" >
+        #{id_contenido,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.qs.modelos.qs.contenidoExample" resultType="java.lang.Integer" >
-    select count(*) from "qs"."contenido"
+  <select id="countByExample" parameterType="com.qs.modelos.qs.multimediaExample" resultType="java.lang.Integer" >
+    select count(*) from "qs"."multimedia"
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update "qs"."contenido"
+    update "qs"."multimedia"
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.titulo != null" >
-        titulo = #{record.titulo,jdbcType=VARCHAR},
+      <if test="record.nombre != null" >
+        nombre = #{record.nombre,jdbcType=CHAR},
+      </if>
+      <if test="record.ruta != null" >
+        ruta = #{record.ruta,jdbcType=CHAR},
+      </if>
+      <if test="record.id_contenido != null" >
+        id_contenido = #{record.id_contenido,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -142,25 +164,35 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update "qs"."contenido"
+    update "qs"."multimedia"
     set id = #{record.id,jdbcType=INTEGER},
-      titulo = #{record.titulo,jdbcType=VARCHAR}
+      nombre = #{record.nombre,jdbcType=CHAR},
+      ruta = #{record.ruta,jdbcType=CHAR},
+      id_contenido = #{record.id_contenido,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qs.modelos.qs.contenido" >
-    update "qs"."contenido"
+  <update id="updateByPrimaryKeySelective" parameterType="com.qs.modelos.qs.multimedia" >
+    update "qs"."multimedia"
     <set >
-      <if test="titulo != null" >
-        titulo = #{titulo,jdbcType=VARCHAR},
+      <if test="nombre != null" >
+        nombre = #{nombre,jdbcType=CHAR},
+      </if>
+      <if test="ruta != null" >
+        ruta = #{ruta,jdbcType=CHAR},
+      </if>
+      <if test="id_contenido != null" >
+        id_contenido = #{id_contenido,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qs.modelos.qs.contenido" >
-    update "qs"."contenido"
-    set titulo = #{titulo,jdbcType=VARCHAR}
+  <update id="updateByPrimaryKey" parameterType="com.qs.modelos.qs.multimedia" >
+    update "qs"."multimedia"
+    set nombre = #{nombre,jdbcType=CHAR},
+      ruta = #{ruta,jdbcType=CHAR},
+      id_contenido = #{id_contenido,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
