@@ -1,7 +1,7 @@
--- Create schemas
+﻿-- Create schemas
 
 -- Create tables
-CREATE TABLE IF NOT EXISTS usuario
+CREATE TABLE IF NOT EXISTS qs.usuario
 (
     id INTEGER NOT NULL,
     nombre VARCHAR(50),
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS usuario
     PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NOT EXISTS membresia
+CREATE TABLE IF NOT EXISTS qs.membresia
 (
     id INTEGER NOT NULL,
     nombre VARCHAR(20),
@@ -22,15 +22,14 @@ CREATE TABLE IF NOT EXISTS membresia
     PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NOT EXISTS contenido
+CREATE TABLE IF NOT EXISTS qs.contenido
 (
     id INTEGER NOT NULL,
     titulo VARCHAR(60),
-    ruta VARCHAR(255),
     PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NOT EXISTS membresia_contenido
+CREATE TABLE IF NOT EXISTS qs.membresia_contenido
 (
     id INTEGER NOT NULL,
     membresia_id INTEGER,
@@ -38,23 +37,36 @@ CREATE TABLE IF NOT EXISTS membresia_contenido
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS qs.multimedia
+(
+    id INTEGER NOT NULL,
+    nombre VARCHAR(200),    
+    id_contenido INTEGER,
+    PRIMARY KEY(id)
+);
 
 -- Create FKs
-ALTER TABLE usuario
+ALTER TABLE qs.usuario
     ADD    FOREIGN KEY (membresia_id)
-    REFERENCES membresia(id)
+    REFERENCES qs.membresia(id)
     MATCH SIMPLE
 ;
     
-ALTER TABLE membresia_contenido
+ALTER TABLE qs.membresia_contenido
     ADD    FOREIGN KEY (membresia_id)
-    REFERENCES membresia(id)
+    REFERENCES qs.membresia(id)
     MATCH SIMPLE
 ;
     
-ALTER TABLE membresia_contenido
+ALTER TABLE qs.membresia_contenido
     ADD    FOREIGN KEY (contenido_id)
-    REFERENCES contenido(id)
+    REFERENCES qs.contenido(id)
+    MATCH SIMPLE
+;
+
+ALTER TABLE qs.multimedia
+    ADD    FOREIGN KEY (id_contenido)
+    REFERENCES qs.contenido(id)
     MATCH SIMPLE
 ;
     

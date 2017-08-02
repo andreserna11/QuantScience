@@ -20,8 +20,7 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
 <!--      <a id="logo-container" href="#" class="brand-logo"><img src="img/LogoQS2.png"></a>-->
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#" >Inicio</a></li>
+      <ul class="right hide-on-med-and-down">        
         <li><a href="#" >Entrenamiento</a></li>
         <li><a href="#" >Trading en Vivo</a></li>
         <li><a href="#Membresias" >Membresías</a></li>
@@ -31,7 +30,6 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#" >Inicio</a></li>
         <li><a href="#" >Entrenamiento</a></li>
         <li><a href="#" >Trading en Vivo</a></li>
         <li><a href="#Membresias" >Membresías</a></li>
@@ -225,7 +223,7 @@
     </div> 
   </div>
   <div class="row center">
-   <a href="#registroModal" id="download-button" class="waves-effect waves-light btn blue darken-2">Continuar</a>
+   <a id="download-button" class="waves-effect waves-light btn blue darken-2" href="#registroModal">Continuar</a>
   </div>
 </section>
 
@@ -246,7 +244,7 @@
             <div class="col s6 contactBackground">
               <div class="row"><h5>Déjanos un mensaje</h5></div>
                 <div class="row">
-                  <form class="col s12">
+                  <form class="col s12" action="andreserna11@gmail.com" method="post" enctype="text/plain">
                     <div class="row">
                       <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -345,7 +343,7 @@
               tu contraseña?</a>
           </div>
           <div class="center col s6"> 
-            <a id="registrate" class="blue-text text-darken-3 modal-action modal-close modal-trigger" href="#registroModal">¡Registrate!</a>
+            <a id="registrate" class="blue-text text-darken-3 modal-action modal-close modal-trigger" href="#membresiaModal">¡Registrate!</a>
           </div>
         </div>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
@@ -359,53 +357,117 @@
   </div>
 </div>
 
-<div id="registroModal" class="modal modal-fixed-footer modal-scroll">
-    <div class="modal-content">
-      <h4 class="grey-text text-darken-2 center">¡Regístrate!</h4>
+<div id="membresiaModal" class="modal modal-fixed-footer modal-scroll">
+    <div class="modal-content background-membresia">      
+      <h4 class="grey-text text-darken-2 center">PASO <b>1</b> DE 2</h4>
       <div class="divider"></div>
-          <div class="section">
-      <div class="row">
-        <div class="col s12 center">
-            <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="nombreRegister" type="text" class="validate" required>
-                <label for="nombreRegister">Nombre</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="apellidoRegister" type="text" class="validate">
-                <label for="apellidoRegister">Apellidos</label>
-              </div>                     
-              <div class="input-field col s6">
-                <i class="material-icons prefix">phone</i>
-                <input id="telefonoRegister" type="text" class="validate" required>
-                <label for="telefonoRegister">Teléfono</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">email</i>
-                <input id="emailRegister" type="email" class="validate" required>
-                 <label for="emailRegister" data-error="Error">Email</label>
-              </div>                      
-              <div class="input-field col s6">
-                <i class="material-icons prefix">&#xE0DA;</i>
-                <input id="contrasenaRegister" type="password" class="validate" required>
-                <label for="contrasenaRegister">Contraseña</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">&#xE0DA;</i>
-                <input id="contrasena2Register" type="password" class="validate" required>
-                <label for="contrasena2Register">Repetir contraseña</label>
-              </div>
-            </div>
-            <div class="row">
-                <button id="btnRegistrar" class="btn waves-effect waves-light blue darken-2">Registrarse
-                  <i class="material-icons right">send</i>
-                </button>
-            </div>
-        </div>
-      </div>
-    </div>
+        <div class="section ">
+		  <form id="form1" method="POST" action="/comprar"></form>
+		  <div class="container">
+		  	<div class="row">
+		  		<h4 class="center">Selecciona tu membresía.</h4>
+		  	</div>
+		    <div class="row">
+		      <div class="col s6"></div>
+		      <div class="col s2 center">
+		        <div class="cellContentModal" id="opt1M" onclick="opt1M(); check1()">
+		          <div class="selborder" id="gratisM">
+		            Gratuito
+		            <input type="radio" name="membership" value="1" id="v1">
+		          </div>
+		        </div>
+		      </div>
+		      <div class="col s2 center">
+		        <div class="cellContentModal" id="opt2M" onclick="opt2M(); check2()">
+		          <div class="selborder" id="basicoM">
+		            Básico
+		            <input type="radio" name="membership" value="2" id="v2" >
+		          </div>
+		        </div>
+		      </div>
+		      <div class="col s2 center">
+		        <div class="cellContentModal" id="opt3M" onclick="opt3M(); check3()">
+		          <div class="selborder" id="avanzadoM">
+		            Avanzado
+		            <input type="radio" name="membership" value="3" id="v3"  checked>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="row">
+		      <div class="col s6"><span><b>Suscripción</b></span></div>
+		      <div class="col s2 center"><b class="op1">$&nbsp;0</b></div>
+		      <div class="col s2 center"><b class="op2">$&nbsp;99</b></div>
+		      <div class="col s2 center"><b class="op3">$&nbsp;399</b></div>
+		    </div>    
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6 ">Introducción al mercado de Cryptodivisas</div>
+		      <div class="col s2 center"><i class="material-icons op1">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div>    
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Soportes y Resistencias</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Operación en Vivo de Cryptodivisas</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Introducción al análisis técnico</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE876;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Acceso a la red social de Trading</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+		      <div class="col s2 center"><b class="op2">2 Semanas</b></div>
+		      <div class="col s2 center"><b class="op3">8 Semanas</b></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Análisis fundamental de las Cryptodivisas</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Money Management en Cryptodivisas</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Patrones psicológicos del mercado</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		    <div class="row">
+		      <div class="divider"></div>
+		      <div class="col s6">Conceptualización de la <b>ICO</b> de una cryptodivisa</div>      
+		      <div class="col s2 center"><i class="material-icons op1">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op2">&#xE5CD;</i></div>
+		      <div class="col s2 center"><i class="material-icons op3">&#xE876;</i></div>
+		    </div> 
+		  </div>
+		  <div class="row center">
+		   <a id="download-button" class="waves-effect waves-light btn blue darken-2 modal-action modal-close modal-trigger" href="#registroModal">Continuar</a>
+		  </div>
+		</div>
     </div>
     <div class="modal-footer grey lighten-3">
       <p class="left white-text grey-text text-darken-2">
@@ -413,6 +475,66 @@
       </p>
     </div>
   </div>
+
+<div id="registroModal" class="modal modal-fixed-footer modal-scroll">
+    <div class="modal-content">
+		<div class="row">
+			<div class="col s1 left"><a href="#membresiaModal"><i class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a></div>
+			<div class="col s11"><h4 class="grey-text text-darken-2 center">PASO <b>2</b> DE 2</h4></div>
+			
+		</div>      
+      	<div class="divider"></div>
+		<div class="section">
+	      <div class="row">
+	        <div class="col s12 center">
+	            <div class="row">
+	              <div class="input-field col s6">
+	                <i class="material-icons prefix">account_circle</i>
+	                <input id="nombreRegister" type="text" class="validate" title="Este campo es obligatorio" required>
+	                <label for="nombreRegister">Nombre</label>
+	              </div>
+	              <div class="input-field col s6">
+	                <i class="material-icons prefix">account_circle</i>
+	                <input id="apellidoRegister" type="text" class="validate">
+	                <label for="apellidoRegister">Apellidos</label>
+	              </div>                     
+	              <div class="input-field col s6">
+	                <i class="material-icons prefix">phone</i>
+	                <input id="telefonoRegister" type="text" class="validate" required>
+	                <label for="telefonoRegister">Teléfono</label>
+	              </div>
+	              <div class="input-field col s6">
+	                <i class="material-icons prefix">email</i>
+	                <input id="emailRegister" type="email" class="validate" required>
+	                 <label for="emailRegister" data-error="Error">Email</label>
+	              </div>                      
+	              <div class="input-field col s6">
+	                <i class="material-icons prefix">&#xE0DA;</i>
+	                <input id="contrasenaRegister" type="password" class="validate" required>
+	                <label for="contrasenaRegister">Contraseña</label>
+	              </div>
+	              <div class="input-field col s6">
+	                <i class="material-icons prefix">&#xE0DA;</i>
+	                <input id="contrasena2Register" type="password" class="validate" required>
+	                <label for="contrasena2Register">Repetir contraseña</label>
+	              </div>
+	            </div>
+	            <div class="row">
+	                <button id="btnRegistrar" class="btn waves-effect waves-light blue darken-2">Registrarse
+	                  <i class="material-icons right">send</i>
+	                </button>
+	            </div>
+	        </div>
+	      </div>
+    	</div>
+    </div>
+    <div class="modal-footer grey lighten-3">
+      <p class="left white-text grey-text text-darken-2">
+        QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
+      </p>
+    </div>
+  </div>
+  
 <div id="olvidarModal" class="modal modal-fixed-footer modalOlvidar">
     <div class="modal-content">
       <h4 class="grey-text text-darken-2 center">¿Olvidaste tu contrseña?</h4>
