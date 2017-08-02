@@ -14,14 +14,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.qs.modelos.qs.usuario;
 import com.qs.modelos.qs.membresia;
-import com.qs.modelos.qs.membresia_contenido;
 import com.qs.modelos.qs.contenido;
 import com.qs.services.ServiceUsuario;
 import com.qs.services.ServiceMembresia;
 import com.qs.services.ServiceMC;
 import com.qs.services.ServiceContenido;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -55,12 +53,7 @@ public class MainController {
 		usuario user = serviceUsuario.getUsuarioService(auth.getName());
 		membresia mem = serviceMembresia.getMembresiaService(user.getMembresia_id());
 		
-		List<membresia_contenido> detalle = serviceMC.getMCService(user.getMembresia_id());
-		List<contenido> contenidos = new ArrayList<contenido>();
-		
-		for(int i = 0;i < detalle.size();i++){
-			contenidos.add(serviceContenido.getContenidoService(detalle.get(i).getContenido_id()));
-		}
+		List<contenido> contenidos = serviceContenido.getContenido_MembresiaService(mem.getId());
 		
 		model.setViewName("decorador/dashboard");
 		model.addObject("usuario", user);
@@ -72,7 +65,6 @@ public class MainController {
 	
 	@RequestMapping(value="/register", method = RequestMethod.POST)
 	public @ResponseBody boolean registeUser(@RequestBody usuario user){
-		
 		return serviceUsuario.insertUsuarioService(user);
 	}
 	
