@@ -54,22 +54,18 @@ public class MainController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		
 		usuario user = serviceUsuario.getUsuarioService(auth.getName());
-		System.out.println(user.getMembresia_id() + " " + user.getTelefono());
 		membresia mem = serviceMembresia.getMembresiaService(user.getMembresia_id());
+		
 		List<membresia_contenido> detalle = serviceMC.getMCService(user.getMembresia_id());
 		List<contenido> contenidos = new ArrayList<contenido>();
-		contenido con;
-		
 		
 		for(int i = 0;i < detalle.size();i++){
-			con = serviceContenido.getContenidoService(detalle.get(i).getContenido_id());
-			contenidos.add(con);
+			contenidos.add(serviceContenido.getContenidoService(detalle.get(i).getContenido_id()));
 		}
 		
-		
 		model.setViewName("decorador/dashboard");
-		model.addObject("usuario",user);
-		model.addObject("membresia",mem);
+		model.addObject("usuario", user);
+		model.addObject("membresia", mem);
 		model.addObject("listaContenido", contenidos);
 		
 		return model;

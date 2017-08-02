@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" session="true" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +15,7 @@
   <link href="<c:url value='resources/css/style.css'/>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="<c:url value='resources/img/favicon.ico'/>"  />
 </head>
-<body>
-	<body class="dashboard">
+<body class="dashboard">
 
 	<ul id="slide-out" class="side-nav fixed">
 		<li>
@@ -25,7 +25,8 @@
 				</div>
 				<a><img class="circle grey darken-4" src="<c:url value='/resources/img/Btc.png'/>"></a>
 				<a><span class="white-text name">${usuario.getNombre()}</span></a>
-				<a><span class="white-text email">${usuario.getEmail()} - ${membresia.getNombre()}</span></a>
+				<c:set var="rol" value="${fn:substring(membresia.getNombre(), 5, 20)}" />
+				<a><span class="white-text email">${usuario.getEmail()} - ${rol}</span></a>
 			</div>
 		</li>
 		<li><a class="waves-effect" href="#"><i class="material-icons">&#xE88A;</i>Dashboard</a></li>
@@ -36,9 +37,8 @@
 			<div class="collapsible-body">
 				<ul>
 					<c:forEach items="${listaContenido}" var="contenido">
-			                <li><a class="waves-effect" href="#!">${contenido.getTitulo()} - ${contenido.getRuta()}</a></li>
+			                <li><a class="waves-effect" href="#!">${contenido.getTitulo()}</a></li>
 			        </c:forEach>
-					
 				</ul>
 			</div>
 		</li></ul> </li>
