@@ -11,7 +11,7 @@ function registarUsuario() {
 		"clave" : $('#contrasenaRegister').val(),
 		"membresia_id": $('#Membresias input[type="radio"]:checked').val()
 	}
-	
+
 	$.ajax({
         url:			'register',
         type:			'POST',

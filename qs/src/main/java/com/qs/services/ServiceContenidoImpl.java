@@ -35,7 +35,7 @@ public class ServiceContenidoImpl implements ServiceContenido {
 		return co;
 	}
 
-	@Override
+
 	public contenido getContenidoIdService(Integer id) {
 		return mMapper.selectByPrimaryKey(id);
 	}

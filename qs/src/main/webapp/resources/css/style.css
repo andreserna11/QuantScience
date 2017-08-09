@@ -83,6 +83,10 @@ p {
   border: 2px;
 }
 
+.colorTitulo{
+	background-color: rgba(242, 242, 242, 0.89);
+}
+
 .cellContentModal {
     display: inline-block;
     width: 80px;
@@ -136,7 +140,9 @@ p {
 .dashboard nav{
   display: none;
 }
-
+.dashboard{
+	overflow-x: hidden; 
+}
 .modalOlvidar{
   max-height: 47%;
 }
@@ -144,6 +150,14 @@ p {
 .modal-scroll{
 	height: 75% !important;
 	max-height: 75% !important;
+}
+
+.modal-scroll-y{
+	overflow-y: hidden !important;
+}
+
+#icon-Account{
+	font-size: 150px !important;
 }
 /*Paquetes----->*/
 

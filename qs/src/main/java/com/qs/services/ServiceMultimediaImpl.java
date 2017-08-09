@@ -36,6 +36,7 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 				InputStream in = new BufferedInputStream(new FileInputStream(f));
 				bytes = IOUtils.toByteArray(in);
 				in.close();
+				System.out.println(bytes);
 			} catch (Exception e) {
 				System.err.println("Ocurrio un error al intentar leer el archivo - " + e.toString());
 			}

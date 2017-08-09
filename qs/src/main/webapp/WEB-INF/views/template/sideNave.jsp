@@ -14,15 +14,15 @@
 				<a><span class="white-text email">${usuario.getEmail()} - ${rol}</span></a>
 			</div>
 		</li>
-		<li><a class="waves-effect" href="#"><i class="material-icons">&#xE88A;</i>Dashboard</a></li>
-		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE853;</i>Mi Cuenta</a></li>
+		<li><a class="waves-effect" href="dashboard"><i class="material-icons">&#xE88A;</i>Dashboard</a></li>
+		<li><a class="waves-effect" href="#editarUsuarioModal"><i class="material-icons">&#xE853;</i>Mi Cuenta</a></li>
 		<li><div class="divider"></div></li>
 		<li><ul class="collapsible collapsible-accordion"><li>
 		<a class="collapsible-header waves-effect p-h-32"><i class="material-icons">&#xE85C;</i>Entrenamiento</a>
 			<div class="collapsible-body">
 				<ul>
 					<c:forEach items="${listaContenido}" var="contenido">
-			                <li><a class="waves-effect" href="#!">${contenido.getTitulo()}</a></li>
+			                <li><a class="waves-effect" href="content">${contenido.getTitulo()}</a></li>
 			        </c:forEach>
 					
 				</ul>

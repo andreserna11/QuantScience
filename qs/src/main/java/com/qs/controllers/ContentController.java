@@ -43,9 +43,8 @@ public class ContentController {
 		List<multimedia> mList = serviceMultimedia.getMultimedia_Contenido(cont.getId());
 		List<byte[]> files = new ArrayList<byte[]>();
 		for (multimedia m : mList) {
-			files.add(serviceMultimedia.getArchivo_Contenido(m));
+			files.add(serviceMultimedia.getArchivo_Contenido(m));			
 		}
-
 		return files;
 	}
 }
