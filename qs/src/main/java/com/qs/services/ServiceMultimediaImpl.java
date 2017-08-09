@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,19 +30,20 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 		return result;
 	}
 
-	public byte[] getArchivo_Contenido(multimedia m) {
-		byte[] bytes = null;
-			try {
-				File f = new File(m.getRuta());
-				InputStream in = new BufferedInputStream(new FileInputStream(f));
-				bytes = IOUtils.toByteArray(in);
-				in.close();
-				System.out.println(bytes);
-			} catch (Exception e) {
-				System.err.println("Ocurrio un error al intentar leer el archivo - " + e.toString());
-			}
+	public String getArchivo_Contenido(multimedia m) {
+		String encoded = "";
+		try {
+			File f = new File(m.getRuta());
+			InputStream in = new BufferedInputStream(new FileInputStream(f));
+			byte[] bytes = IOUtils.toByteArray(in);
+			encoded = Base64.encodeBase64String(bytes);
+			
+			in.close();
+		} catch (Exception e) {
+			System.err.println("Ocurrio un error al intentar leer el archivo - " + e.toString());
+		}
 
-		return bytes;
+		return encoded;
 	}
 
 }

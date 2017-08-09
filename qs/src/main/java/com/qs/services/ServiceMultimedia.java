@@ -8,6 +8,6 @@ public interface ServiceMultimedia {
 
 	public List<multimedia> getMultimedia_Contenido(Integer id);
 	
-	public byte[] getArchivo_Contenido(multimedia m);
+	public String getArchivo_Contenido(multimedia m);
 	
 }

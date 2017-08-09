@@ -132,9 +132,9 @@ p {
 }
 
 .dashboard header,
-.dashboard main,
+.dashboard .container,
 .dashboard footer {
-  padding-left: 300px;
+  padding-left: 310px;
 }
 
 .dashboard nav{
@@ -164,7 +164,6 @@ p {
 /* Dashboard*/
 
 .container-dasboard{
-	margin-left: 311px;
     width: auto;
     max-width: initial;
 }
@@ -172,9 +171,9 @@ p {
 
 @media only screen and (max-width : 992px) {
   .dashboard header,
-  .dashboard main,
+  .dashboard .container,
   .dashboard footer {
-    padding-left: 0;
+    padding-left: 10px;
   }
   .dashboard nav{
     display: block;
