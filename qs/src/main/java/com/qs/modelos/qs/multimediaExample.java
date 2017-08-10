@@ -304,63 +304,73 @@ public class multimediaExample {
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoIsNull() {
-            addCriterion("id_contenido is null");
+        public Criteria andTipoIsNull() {
+            addCriterion("tipo is null");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoIsNotNull() {
-            addCriterion("id_contenido is not null");
+        public Criteria andTipoIsNotNull() {
+            addCriterion("tipo is not null");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoEqualTo(Integer value) {
-            addCriterion("id_contenido =", value, "id_contenido");
+        public Criteria andTipoEqualTo(String value) {
+            addCriterion("tipo =", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoNotEqualTo(Integer value) {
-            addCriterion("id_contenido <>", value, "id_contenido");
+        public Criteria andTipoNotEqualTo(String value) {
+            addCriterion("tipo <>", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoGreaterThan(Integer value) {
-            addCriterion("id_contenido >", value, "id_contenido");
+        public Criteria andTipoGreaterThan(String value) {
+            addCriterion("tipo >", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoGreaterThanOrEqualTo(Integer value) {
-            addCriterion("id_contenido >=", value, "id_contenido");
+        public Criteria andTipoGreaterThanOrEqualTo(String value) {
+            addCriterion("tipo >=", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoLessThan(Integer value) {
-            addCriterion("id_contenido <", value, "id_contenido");
+        public Criteria andTipoLessThan(String value) {
+            addCriterion("tipo <", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoLessThanOrEqualTo(Integer value) {
-            addCriterion("id_contenido <=", value, "id_contenido");
+        public Criteria andTipoLessThanOrEqualTo(String value) {
+            addCriterion("tipo <=", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoIn(List<Integer> values) {
-            addCriterion("id_contenido in", values, "id_contenido");
+        public Criteria andTipoLike(String value) {
+            addCriterion("tipo like", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoNotIn(List<Integer> values) {
-            addCriterion("id_contenido not in", values, "id_contenido");
+        public Criteria andTipoNotLike(String value) {
+            addCriterion("tipo not like", value, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoBetween(Integer value1, Integer value2) {
-            addCriterion("id_contenido between", value1, value2, "id_contenido");
+        public Criteria andTipoIn(List<String> values) {
+            addCriterion("tipo in", values, "tipo");
             return (Criteria) this;
         }
 
-        public Criteria andId_contenidoNotBetween(Integer value1, Integer value2) {
-            addCriterion("id_contenido not between", value1, value2, "id_contenido");
+        public Criteria andTipoNotIn(List<String> values) {
+            addCriterion("tipo not in", values, "tipo");
+            return (Criteria) this;
+        }
+
+        public Criteria andTipoBetween(String value1, String value2) {
+            addCriterion("tipo between", value1, value2, "tipo");
+            return (Criteria) this;
+        }
+
+        public Criteria andTipoNotBetween(String value1, String value2) {
+            addCriterion("tipo not between", value1, value2, "tipo");
             return (Criteria) this;
         }
     }

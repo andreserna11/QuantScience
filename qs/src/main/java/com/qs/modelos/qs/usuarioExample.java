@@ -634,6 +634,66 @@ public class usuarioExample {
             addCriterion("fecha_compra not between", value1, value2, "fecha_compra");
             return (Criteria) this;
         }
+
+        public Criteria andEstadoIsNull() {
+            addCriterion("estado is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoIsNotNull() {
+            addCriterion("estado is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoEqualTo(Boolean value) {
+            addCriterion("estado =", value, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoNotEqualTo(Boolean value) {
+            addCriterion("estado <>", value, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoGreaterThan(Boolean value) {
+            addCriterion("estado >", value, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("estado >=", value, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoLessThan(Boolean value) {
+            addCriterion("estado <", value, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoLessThanOrEqualTo(Boolean value) {
+            addCriterion("estado <=", value, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoIn(List<Boolean> values) {
+            addCriterion("estado in", values, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoNotIn(List<Boolean> values) {
+            addCriterion("estado not in", values, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoBetween(Boolean value1, Boolean value2) {
+            addCriterion("estado between", value1, value2, "estado");
+            return (Criteria) this;
+        }
+
+        public Criteria andEstadoNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("estado not between", value1, value2, "estado");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

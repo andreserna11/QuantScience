@@ -10,6 +10,7 @@
     <result column="clave" property="clave" jdbcType="VARCHAR" />
     <result column="membresia_id" property="membresia_id" jdbcType="INTEGER" />
     <result column="fecha_compra" property="fecha_compra" jdbcType="TIMESTAMP" />
+    <result column="estado" property="estado" jdbcType="BIT" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -70,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, nombre, apellidos, telefono, email, clave, membresia_id, fecha_compra
+    id, nombre, apellidos, telefono, email, clave, membresia_id, fecha_compra, estado
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.usuarioExample" >
     select
@@ -108,10 +109,12 @@
     </selectKey>
     insert into "qs"."usuario" (id, nombre, apellidos, 
       telefono, email, clave, 
-      membresia_id, fecha_compra)
+      membresia_id, fecha_compra, estado
+      )
     values (#{id,jdbcType=INTEGER}, #{nombre,jdbcType=VARCHAR}, #{apellidos,jdbcType=VARCHAR}, 
       #{telefono,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{clave,jdbcType=VARCHAR}, 
-      #{membresia_id,jdbcType=INTEGER}, #{fecha_compra,jdbcType=TIMESTAMP})
+      #{membresia_id,jdbcType=INTEGER}, #{fecha_compra,jdbcType=TIMESTAMP}, #{estado,jdbcType=BIT}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.qs.modelos.qs.usuario" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
@@ -141,6 +144,9 @@
       <if test="fecha_compra != null" >
         fecha_compra,
       </if>
+      <if test="estado != null" >
+        estado,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       #{id,jdbcType=INTEGER},
@@ -164,6 +170,9 @@
       </if>
       <if test="fecha_compra != null" >
         #{fecha_compra,jdbcType=TIMESTAMP},
+      </if>
+      <if test="estado != null" >
+        #{estado,jdbcType=BIT},
       </if>
     </trim>
   </insert>
@@ -200,6 +209,9 @@
       <if test="record.fecha_compra != null" >
         fecha_compra = #{record.fecha_compra,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.estado != null" >
+        estado = #{record.estado,jdbcType=BIT},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -214,7 +226,8 @@
       email = #{record.email,jdbcType=VARCHAR},
       clave = #{record.clave,jdbcType=VARCHAR},
       membresia_id = #{record.membresia_id,jdbcType=INTEGER},
-      fecha_compra = #{record.fecha_compra,jdbcType=TIMESTAMP}
+      fecha_compra = #{record.fecha_compra,jdbcType=TIMESTAMP},
+      estado = #{record.estado,jdbcType=BIT}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -243,6 +256,9 @@
       <if test="fecha_compra != null" >
         fecha_compra = #{fecha_compra,jdbcType=TIMESTAMP},
       </if>
+      <if test="estado != null" >
+        estado = #{estado,jdbcType=BIT},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -254,7 +270,8 @@
       email = #{email,jdbcType=VARCHAR},
       clave = #{clave,jdbcType=VARCHAR},
       membresia_id = #{membresia_id,jdbcType=INTEGER},
-      fecha_compra = #{fecha_compra,jdbcType=TIMESTAMP}
+      fecha_compra = #{fecha_compra,jdbcType=TIMESTAMP},
+      estado = #{estado,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

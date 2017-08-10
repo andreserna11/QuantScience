@@ -7,7 +7,7 @@ public class multimedia {
 
     private String ruta;
 
-    private Integer id_contenido;
+    private String tipo;
 
     public Integer getId() {
         return id;
@@ -33,11 +33,11 @@ public class multimedia {
         this.ruta = ruta;
     }
 
-    public Integer getId_contenido() {
-        return id_contenido;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setId_contenido(Integer id_contenido) {
-        this.id_contenido = id_contenido;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

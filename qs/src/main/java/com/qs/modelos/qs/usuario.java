@@ -19,6 +19,8 @@ public class usuario {
 
     private Date fecha_compra;
 
+    private Boolean estado;
+
     public Integer getId() {
         return id;
     }
@@ -81,5 +83,13 @@ public class usuario {
 
     public void setFecha_compra(Date fecha_compra) {
         this.fecha_compra = fecha_compra;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
     }
 }

@@ -5,6 +5,8 @@ public class contenido {
 
     private String titulo;
 
+    private String descripcion;
+
     public Integer getId() {
         return id;
     }
@@ -19,5 +21,13 @@ public class contenido {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }

@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="nombre" property="nombre" jdbcType="CHAR" />
     <result column="ruta" property="ruta" jdbcType="CHAR" />
-    <result column="id_contenido" property="id_contenido" jdbcType="INTEGER" />
+    <result column="tipo" property="tipo" jdbcType="CHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, nombre, ruta, id_contenido
+    id, nombre, ruta, tipo
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.multimediaExample" >
     select
@@ -102,9 +102,9 @@
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
       select nextval ('qs.multimedia_id_seq');
     </selectKey>
-    insert into "qs"."multimedia" (id, nombre, ruta, id_contenido
+    insert into "qs"."multimedia" (id, nombre, ruta, tipo
       )
-    values (#{id,jdbcType=INTEGER}, #{nombre,jdbcType=CHAR}, #{ruta,jdbcType=CHAR}, #{id_contenido,jdbcType=INTEGER}
+    values (#{id,jdbcType=INTEGER}, #{nombre,jdbcType=CHAR}, #{ruta,jdbcType=CHAR}, #{tipo,jdbcType=CHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.qs.modelos.qs.multimedia" >
@@ -120,8 +120,8 @@
       <if test="ruta != null" >
         ruta,
       </if>
-      <if test="id_contenido != null" >
-        id_contenido,
+      <if test="tipo != null" >
+        tipo,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -132,8 +132,8 @@
       <if test="ruta != null" >
         #{ruta,jdbcType=CHAR},
       </if>
-      <if test="id_contenido != null" >
-        #{id_contenido,jdbcType=INTEGER},
+      <if test="tipo != null" >
+        #{tipo,jdbcType=CHAR},
       </if>
     </trim>
   </insert>
@@ -155,8 +155,8 @@
       <if test="record.ruta != null" >
         ruta = #{record.ruta,jdbcType=CHAR},
       </if>
-      <if test="record.id_contenido != null" >
-        id_contenido = #{record.id_contenido,jdbcType=INTEGER},
+      <if test="record.tipo != null" >
+        tipo = #{record.tipo,jdbcType=CHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -168,7 +168,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       nombre = #{record.nombre,jdbcType=CHAR},
       ruta = #{record.ruta,jdbcType=CHAR},
-      id_contenido = #{record.id_contenido,jdbcType=INTEGER}
+      tipo = #{record.tipo,jdbcType=CHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -182,8 +182,8 @@
       <if test="ruta != null" >
         ruta = #{ruta,jdbcType=CHAR},
       </if>
-      <if test="id_contenido != null" >
-        id_contenido = #{id_contenido,jdbcType=INTEGER},
+      <if test="tipo != null" >
+        tipo = #{tipo,jdbcType=CHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -192,7 +192,7 @@
     update "qs"."multimedia"
     set nombre = #{nombre,jdbcType=CHAR},
       ruta = #{ruta,jdbcType=CHAR},
-      id_contenido = #{id_contenido,jdbcType=INTEGER}
+      tipo = #{tipo,jdbcType=CHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

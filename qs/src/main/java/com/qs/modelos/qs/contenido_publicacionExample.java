@@ -3,14 +3,14 @@ package com.qs.modelos.qs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class contenidoExample {
+public class contenido_publicacionExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public contenidoExample() {
+    public contenido_publicacionExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,143 +164,243 @@ public class contenidoExample {
             return (Criteria) this;
         }
 
-        public Criteria andTituloIsNull() {
-            addCriterion("titulo is null");
+        public Criteria andId_contenidoIsNull() {
+            addCriterion("id_contenido is null");
             return (Criteria) this;
         }
 
-        public Criteria andTituloIsNotNull() {
-            addCriterion("titulo is not null");
+        public Criteria andId_contenidoIsNotNull() {
+            addCriterion("id_contenido is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTituloEqualTo(String value) {
-            addCriterion("titulo =", value, "titulo");
+        public Criteria andId_contenidoEqualTo(Integer value) {
+            addCriterion("id_contenido =", value, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloNotEqualTo(String value) {
-            addCriterion("titulo <>", value, "titulo");
+        public Criteria andId_contenidoNotEqualTo(Integer value) {
+            addCriterion("id_contenido <>", value, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloGreaterThan(String value) {
-            addCriterion("titulo >", value, "titulo");
+        public Criteria andId_contenidoGreaterThan(Integer value) {
+            addCriterion("id_contenido >", value, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloGreaterThanOrEqualTo(String value) {
-            addCriterion("titulo >=", value, "titulo");
+        public Criteria andId_contenidoGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id_contenido >=", value, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloLessThan(String value) {
-            addCriterion("titulo <", value, "titulo");
+        public Criteria andId_contenidoLessThan(Integer value) {
+            addCriterion("id_contenido <", value, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloLessThanOrEqualTo(String value) {
-            addCriterion("titulo <=", value, "titulo");
+        public Criteria andId_contenidoLessThanOrEqualTo(Integer value) {
+            addCriterion("id_contenido <=", value, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloLike(String value) {
-            addCriterion("titulo like", value, "titulo");
+        public Criteria andId_contenidoIn(List<Integer> values) {
+            addCriterion("id_contenido in", values, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloNotLike(String value) {
-            addCriterion("titulo not like", value, "titulo");
+        public Criteria andId_contenidoNotIn(List<Integer> values) {
+            addCriterion("id_contenido not in", values, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloIn(List<String> values) {
-            addCriterion("titulo in", values, "titulo");
+        public Criteria andId_contenidoBetween(Integer value1, Integer value2) {
+            addCriterion("id_contenido between", value1, value2, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloNotIn(List<String> values) {
-            addCriterion("titulo not in", values, "titulo");
+        public Criteria andId_contenidoNotBetween(Integer value1, Integer value2) {
+            addCriterion("id_contenido not between", value1, value2, "id_contenido");
             return (Criteria) this;
         }
 
-        public Criteria andTituloBetween(String value1, String value2) {
-            addCriterion("titulo between", value1, value2, "titulo");
+        public Criteria andId_publicacionIsNull() {
+            addCriterion("id_publicacion is null");
             return (Criteria) this;
         }
 
-        public Criteria andTituloNotBetween(String value1, String value2) {
-            addCriterion("titulo not between", value1, value2, "titulo");
+        public Criteria andId_publicacionIsNotNull() {
+            addCriterion("id_publicacion is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionIsNull() {
-            addCriterion("descripcion is null");
+        public Criteria andId_publicacionEqualTo(Integer value) {
+            addCriterion("id_publicacion =", value, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionIsNotNull() {
-            addCriterion("descripcion is not null");
+        public Criteria andId_publicacionNotEqualTo(Integer value) {
+            addCriterion("id_publicacion <>", value, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionEqualTo(String value) {
-            addCriterion("descripcion =", value, "descripcion");
+        public Criteria andId_publicacionGreaterThan(Integer value) {
+            addCriterion("id_publicacion >", value, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionNotEqualTo(String value) {
-            addCriterion("descripcion <>", value, "descripcion");
+        public Criteria andId_publicacionGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id_publicacion >=", value, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionGreaterThan(String value) {
-            addCriterion("descripcion >", value, "descripcion");
+        public Criteria andId_publicacionLessThan(Integer value) {
+            addCriterion("id_publicacion <", value, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionGreaterThanOrEqualTo(String value) {
-            addCriterion("descripcion >=", value, "descripcion");
+        public Criteria andId_publicacionLessThanOrEqualTo(Integer value) {
+            addCriterion("id_publicacion <=", value, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionLessThan(String value) {
-            addCriterion("descripcion <", value, "descripcion");
+        public Criteria andId_publicacionIn(List<Integer> values) {
+            addCriterion("id_publicacion in", values, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionLessThanOrEqualTo(String value) {
-            addCriterion("descripcion <=", value, "descripcion");
+        public Criteria andId_publicacionNotIn(List<Integer> values) {
+            addCriterion("id_publicacion not in", values, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionLike(String value) {
-            addCriterion("descripcion like", value, "descripcion");
+        public Criteria andId_publicacionBetween(Integer value1, Integer value2) {
+            addCriterion("id_publicacion between", value1, value2, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionNotLike(String value) {
-            addCriterion("descripcion not like", value, "descripcion");
+        public Criteria andId_publicacionNotBetween(Integer value1, Integer value2) {
+            addCriterion("id_publicacion not between", value1, value2, "id_publicacion");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionIn(List<String> values) {
-            addCriterion("descripcion in", values, "descripcion");
+        public Criteria andId_multimediaIsNull() {
+            addCriterion("id_multimedia is null");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionNotIn(List<String> values) {
-            addCriterion("descripcion not in", values, "descripcion");
+        public Criteria andId_multimediaIsNotNull() {
+            addCriterion("id_multimedia is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionBetween(String value1, String value2) {
-            addCriterion("descripcion between", value1, value2, "descripcion");
+        public Criteria andId_multimediaEqualTo(Integer value) {
+            addCriterion("id_multimedia =", value, "id_multimedia");
             return (Criteria) this;
         }
 
-        public Criteria andDescripcionNotBetween(String value1, String value2) {
-            addCriterion("descripcion not between", value1, value2, "descripcion");
+        public Criteria andId_multimediaNotEqualTo(Integer value) {
+            addCriterion("id_multimedia <>", value, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaGreaterThan(Integer value) {
+            addCriterion("id_multimedia >", value, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id_multimedia >=", value, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaLessThan(Integer value) {
+            addCriterion("id_multimedia <", value, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaLessThanOrEqualTo(Integer value) {
+            addCriterion("id_multimedia <=", value, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaIn(List<Integer> values) {
+            addCriterion("id_multimedia in", values, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaNotIn(List<Integer> values) {
+            addCriterion("id_multimedia not in", values, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaBetween(Integer value1, Integer value2) {
+            addCriterion("id_multimedia between", value1, value2, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andId_multimediaNotBetween(Integer value1, Integer value2) {
+            addCriterion("id_multimedia not between", value1, value2, "id_multimedia");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionIsNull() {
+            addCriterion("order_publicacion is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionIsNotNull() {
+            addCriterion("order_publicacion is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionEqualTo(Long value) {
+            addCriterion("order_publicacion =", value, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionNotEqualTo(Long value) {
+            addCriterion("order_publicacion <>", value, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionGreaterThan(Long value) {
+            addCriterion("order_publicacion >", value, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionGreaterThanOrEqualTo(Long value) {
+            addCriterion("order_publicacion >=", value, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionLessThan(Long value) {
+            addCriterion("order_publicacion <", value, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionLessThanOrEqualTo(Long value) {
+            addCriterion("order_publicacion <=", value, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionIn(List<Long> values) {
+            addCriterion("order_publicacion in", values, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionNotIn(List<Long> values) {
+            addCriterion("order_publicacion not in", values, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionBetween(Long value1, Long value2) {
+            addCriterion("order_publicacion between", value1, value2, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andOrder_publicacionNotBetween(Long value1, Long value2) {
+            addCriterion("order_publicacion not between", value1, value2, "order_publicacion");
             return (Criteria) this;
         }
     }

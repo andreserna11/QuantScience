@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -11,23 +12,33 @@ import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qs.dao.qs.contenido_publicacionMapper;
 import com.qs.dao.qs.multimediaMapper;
+import com.qs.modelos.qs.contenido_publicacion;
+import com.qs.modelos.qs.contenido_publicacionExample;
 import com.qs.modelos.qs.multimedia;
-import com.qs.modelos.qs.multimediaExample;
 
 @Service
 public class ServiceMultimediaImpl implements ServiceMultimedia {
 
 	@Autowired
+	contenido_publicacionMapper cpMapper;
+	
+	@Autowired
 	multimediaMapper mMapper;
 
 	public List<multimedia> getMultimedia_Contenido(Integer id) {
-		multimediaExample mExample = new multimediaExample();
-		mExample.or().andId_contenidoEqualTo(id);
+		contenido_publicacionExample cpExample = new contenido_publicacionExample();
+		cpExample.or().andId_contenidoEqualTo(id);
 
-		List<multimedia> result = mMapper.selectByExample(mExample);
-
-		return result;
+		List<contenido_publicacion> cpResult = cpMapper.selectByExample(cpExample);
+		
+		List<multimedia> mResult = new ArrayList<multimedia>();
+		for (contenido_publicacion contenido_publicacion : cpResult) {
+			mResult.add(mMapper.selectByPrimaryKey(contenido_publicacion.getId_multimedia()));
+		}
+		
+		return mResult;
 	}
 
 	public String getArchivo_Contenido(multimedia m) {
