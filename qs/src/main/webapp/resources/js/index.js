@@ -19,13 +19,13 @@ function registarUsuario() {
         data:  			JSON.stringify(usuario),
         success:  function (response) {
         	if(response){
-        		alert("Se registro Correctamente");
+        		Materialize.toast('Te has registrado correctamente', 4000);
         	} else {
-        		alert("Fallo en el registro");
+        		Materialize.toast('Fallo en el registro', 4000);
         	}
         },
         error: function (response) {
-        	alert(response);
+        	console.log(response);
         }
 	});
 }

@@ -27,8 +27,7 @@
 				</ul>
 			</div>
 		</li></ul> </li>
-		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE04B;</i>Trading en Vivo</a></li>
-		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE86E;</i>Blog</a></li>
+		<li><a class="waves-effect" href="#!"><i class="material-icons">&#xE04B;</i>Trading en Vivo</a></li>		
 		<li><a class="waves-effect" href="<c:url value='/logout'/>"><i class="material-icons">&#xE879;</i>Cerrar Sesión</a></li>
 	</ul>
 	<nav>

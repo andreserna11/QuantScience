@@ -21,10 +21,18 @@
 				<h3>${contenido.getTitulo()}</h3>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col s12">
+				<h4>¿Qué es Lorem Ipsum?</h4>				
+			</div>
+			<div class="col s12">
+				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+			</div>
+		</div>
 		<c:forEach items="${videos}" var="video">
 			<div class="row">
-				<div class="col s12 ">
-					<video width="320" height="240" controls>
+				<div class="col s12 center">
+					<video width="600" height="400" controls>
 	  					<source type="video/mp4" src="data:video/mp4;base64,${video}">
 	  				</video>
 				</div>

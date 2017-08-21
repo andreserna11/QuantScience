@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="<c:url value='resources/css/materialize.css'/>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="<c:url value='resources/css/style.css'/>" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="<c:url value='resources/css/validaciones/validation.css'/>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="<c:url value='resources/img/favicon.ico'/>"  />
 </head>
 <body>
@@ -21,19 +22,15 @@
     <div class="nav-wrapper container">
 <!--      <a id="logo-container" href="#" class="brand-logo"><img src="img/LogoQS2.png"></a>-->
       <ul class="right hide-on-med-and-down">        
-        <li><a href="#" >Entrenamiento</a></li>
-        <li><a href="#" >Trading en Vivo</a></li>
-        <li><a href="#Membresias" >Membresías</a></li>
-        <li><a href="#" >Blog</a></li>
+        <li><a href="#Membresias" >Entrenamiento</a></li>
+        <li><a href="#"tradingEnVivo >Trading en Vivo</a></li>
         <li><a href="#contact_us" >Contáctanos</a></li>
         <li><a href="#loginModal" >Login</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#" >Entrenamiento</a></li>
-        <li><a href="#" >Trading en Vivo</a></li>
-        <li><a href="#Membresias" >Membresías</a></li>
-        <li><a href="#" >Blog</a></li>
+        <li><a href="#Membresias" >Entrenamiento</a></li>
+        <li><a href="#tradingEnVivo" >Trading en Vivo</a></li>        
         <li><a href="#contact_us" >Contáctanos</a></li>
         <li><a href="#loginModal" >Login</a></li>
       </ul>
@@ -74,48 +71,15 @@
           <h4>TESTIMONIOS</h4>
           <div class="divider"></div>
         </div>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center"><img src="<c:url value='/resources/img/ic_terminal.png'/>"></h2>
-            <h5 class="center">Lorem Ipsum</h5>
-
-            <p class="light">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
-          </div>
+        <div class="col s12 center">
+        	<br>
+          	<iframe width="700" height="400" src="https://www.youtube.com/embed/_nzhTA0Sm34" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center"><img src="<c:url value='/resources/img/ic_economy.png'/>"></h2>
-            <h5 class="center">Lorem Ipsum</h5>
-
-            <p class="light">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center"><img src="<c:url value='/resources/img/Crecimiento.png'/>"></h2>
-            <h5 class="center">Lorem Ipsum</h5>
-
-            <p class="light">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <div class="col s12">
+        	<p>En este video les mostramos a ustedes nuestros traders el testimonio de Richard, uno de nuestros traders de la ciudad de Cali que ya operan en vivo obteniendo excelentes resultados y consistencias gracias al acompañamiento y entrenamiento de Quantsciense Tecnologies.</p>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="<c:url value='/resources/img/background2.jpg'/>" alt="Unsplashed background img 2"></div>
   </div>
 </section>
 
@@ -225,6 +189,20 @@
   <div class="row center">
    <a id="download-button" class="waves-effect waves-light btn blue darken-2" href="#registroModal">Continuar</a>
   </div>
+  <br>
+</section>
+
+<section id="tradingEnVivo">
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="<c:url value='/resources/img/background2.jpg'/>" alt="Unsplashed background img 2"></div>
+  </div>
 </section>
 
 <section id="contact_us">
@@ -244,7 +222,7 @@
             <div class="col s6 contactBackground">
               <div class="row"><h5>Déjanos un mensaje</h5></div>
                 <div class="row">
-                  <form class="col s12" action="andreserna11@gmail.com" method="post" enctype="text/plain">
+                  <form class="col s12" action="" method="post" enctype="text/plain">
                     <div class="row">
                       <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -492,26 +470,41 @@
 	                <i class="material-icons prefix">account_circle</i>
 	                <input id="nombreRegister" type="text" class="validate" title="Este campo es obligatorio" required>
 	                <label for="nombreRegister">Nombre</label>
+	                <div id="errorNombre" class="errores">
+	                	<span class="red-text text-darken-2">Este campo es obligatorio</span>
+	                </div>
 	              </div>
 	              <div class="input-field col s6">
 	                <i class="material-icons prefix">account_circle</i>
 	                <input id="apellidoRegister" type="text" class="validate">
 	                <label for="apellidoRegister">Apellidos</label>
+	                <div id="errorApellido" class="errores">
+	                	<span class="red-text text-darken-2">Este campo es obligatorio</span>
+	                </div>
 	              </div>                     
 	              <div class="input-field col s6">
 	                <i class="material-icons prefix">phone</i>
 	                <input id="telefonoRegister" type="text" class="validate" required>
 	                <label for="telefonoRegister">Teléfono</label>
+	                <div id="errorTelefono" class="errores">
+	                	<span class="red-text text-darken-2">Este campo es obligatorio</span>
+	                </div>
 	              </div>
 	              <div class="input-field col s6">
 	                <i class="material-icons prefix">email</i>
 	                <input id="emailRegister" type="email" class="validate" required>
 	                 <label for="emailRegister" data-error="Error">Email</label>
+	                 <div id="errorEmail" class="errores">
+	                 	<span class="red-text text-darken-2">Este campo es obligatorio</span>
+	                 </div>
 	              </div>                      
 	              <div class="input-field col s6">
 	                <i class="material-icons prefix">&#xE0DA;</i>
 	                <input id="contrasenaRegister" type="password" class="validate" required>
 	                <label for="contrasenaRegister">Contraseña</label>
+	                <div id="errorClave" class="errores">
+	                	<span class="red-text text-darken-2">Este campo es obligatorio</span>	                
+	                </div>
 	              </div>
 	              <div class="input-field col s6">
 	                <i class="material-icons prefix">&#xE0DA;</i>

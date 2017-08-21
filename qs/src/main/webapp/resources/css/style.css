@@ -37,6 +37,14 @@ p {
   text-align: left;
 }
 
+.modal{
+	max-height: 80%;
+}
+
+.modal.modal-fixed-footer {
+	height: 80%;	
+}
+
 .contactBackground{
   background-color: rgba(242, 242, 242, 0.89);
 }
