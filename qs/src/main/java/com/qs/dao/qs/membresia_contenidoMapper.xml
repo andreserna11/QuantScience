@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qs.dao.qs.membresia_contenidoMapper" >
+  <resultMap id="BaseResultMap" type="com.qs.modelos.qs.membresia_contenido" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="membresia_id" property="membresia_id" jdbcType="INTEGER" />
+    <result column="contenido_id" property="contenido_id" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, membresia_id, contenido_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.membresia_contenidoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from "qs"."membresia_contenido"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from "qs"."membresia_contenido"
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from "qs"."membresia_contenido"
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.qs.modelos.qs.membresia_contenidoExample" >
+    delete from "qs"."membresia_contenido"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.qs.modelos.qs.membresia_contenido" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      select nextval ('qs.membresia_contenido_id_seq');
+    </selectKey>
+    insert into "qs"."membresia_contenido" (id, membresia_id, contenido_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{membresia_id,jdbcType=INTEGER}, #{contenido_id,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qs.modelos.qs.membresia_contenido" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      select nextval ('qs.membresia_contenido_id_seq');
+    </selectKey>
+    insert into "qs"."membresia_contenido"
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      id,
+      <if test="membresia_id != null" >
+        membresia_id,
+      </if>
+      <if test="contenido_id != null" >
+        contenido_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      #{id,jdbcType=INTEGER},
+      <if test="membresia_id != null" >
+        #{membresia_id,jdbcType=INTEGER},
+      </if>
+      <if test="contenido_id != null" >
+        #{contenido_id,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.qs.modelos.qs.membresia_contenidoExample" resultType="java.lang.Integer" >
+    select count(*) from "qs"."membresia_contenido"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update "qs"."membresia_contenido"
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.membresia_id != null" >
+        membresia_id = #{record.membresia_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.contenido_id != null" >
+        contenido_id = #{record.contenido_id,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update "qs"."membresia_contenido"
+    set id = #{record.id,jdbcType=INTEGER},
+      membresia_id = #{record.membresia_id,jdbcType=INTEGER},
+      contenido_id = #{record.contenido_id,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qs.modelos.qs.membresia_contenido" >
+    update "qs"."membresia_contenido"
+    <set >
+      <if test="membresia_id != null" >
+        membresia_id = #{membresia_id,jdbcType=INTEGER},
+      </if>
+      <if test="contenido_id != null" >
+        contenido_id = #{contenido_id,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qs.modelos.qs.membresia_contenido" >
+    update "qs"."membresia_contenido"
+    set membresia_id = #{membresia_id,jdbcType=INTEGER},
+      contenido_id = #{contenido_id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

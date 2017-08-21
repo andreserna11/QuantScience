@@ -1,7 +1,5 @@
 package com.qs.services;
 
-import org.json.JSONObject;
-
 import com.qs.modelos.qs.usuario;
 
 public interface ServiceUsuario {

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qs.dao.qs.usuario_membresiaMapper" >
+  <resultMap id="BaseResultMap" type="com.qs.modelos.qs.usuario_membresia" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="id_membresia" property="id_membresia" jdbcType="INTEGER" />
+    <result column="id_usuario" property="id_usuario" jdbcType="INTEGER" />
+    <result column="fecha_compra" property="fecha_compra" jdbcType="DATE" />
+    <result column="estado" property="estado" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, id_membresia, id_usuario, fecha_compra, estado
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.usuario_membresiaExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from "qs"."usuario_membresia"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from "qs"."usuario_membresia"
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from "qs"."usuario_membresia"
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.qs.modelos.qs.usuario_membresiaExample" >
+    delete from "qs"."usuario_membresia"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.qs.modelos.qs.usuario_membresia" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      select nextval ('qs.usuario_membresia_id_seq');
+    </selectKey>
+    insert into "qs"."usuario_membresia" (id, id_membresia, id_usuario, 
+      fecha_compra, estado)
+    values (#{id,jdbcType=INTEGER}, #{id_membresia,jdbcType=INTEGER}, #{id_usuario,jdbcType=INTEGER}, 
+      #{fecha_compra,jdbcType=DATE}, #{estado,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qs.modelos.qs.usuario_membresia" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      select nextval ('qs.usuario_membresia_id_seq');
+    </selectKey>
+    insert into "qs"."usuario_membresia"
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      id,
+      <if test="id_membresia != null" >
+        id_membresia,
+      </if>
+      <if test="id_usuario != null" >
+        id_usuario,
+      </if>
+      <if test="fecha_compra != null" >
+        fecha_compra,
+      </if>
+      <if test="estado != null" >
+        estado,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      #{id,jdbcType=INTEGER},
+      <if test="id_membresia != null" >
+        #{id_membresia,jdbcType=INTEGER},
+      </if>
+      <if test="id_usuario != null" >
+        #{id_usuario,jdbcType=INTEGER},
+      </if>
+      <if test="fecha_compra != null" >
+        #{fecha_compra,jdbcType=DATE},
+      </if>
+      <if test="estado != null" >
+        #{estado,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.qs.modelos.qs.usuario_membresiaExample" resultType="java.lang.Integer" >
+    select count(*) from "qs"."usuario_membresia"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update "qs"."usuario_membresia"
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.id_membresia != null" >
+        id_membresia = #{record.id_membresia,jdbcType=INTEGER},
+      </if>
+      <if test="record.id_usuario != null" >
+        id_usuario = #{record.id_usuario,jdbcType=INTEGER},
+      </if>
+      <if test="record.fecha_compra != null" >
+        fecha_compra = #{record.fecha_compra,jdbcType=DATE},
+      </if>
+      <if test="record.estado != null" >
+        estado = #{record.estado,jdbcType=BIT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update "qs"."usuario_membresia"
+    set id = #{record.id,jdbcType=INTEGER},
+      id_membresia = #{record.id_membresia,jdbcType=INTEGER},
+      id_usuario = #{record.id_usuario,jdbcType=INTEGER},
+      fecha_compra = #{record.fecha_compra,jdbcType=DATE},
+      estado = #{record.estado,jdbcType=BIT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qs.modelos.qs.usuario_membresia" >
+    update "qs"."usuario_membresia"
+    <set >
+      <if test="id_membresia != null" >
+        id_membresia = #{id_membresia,jdbcType=INTEGER},
+      </if>
+      <if test="id_usuario != null" >
+        id_usuario = #{id_usuario,jdbcType=INTEGER},
+      </if>
+      <if test="fecha_compra != null" >
+        fecha_compra = #{fecha_compra,jdbcType=DATE},
+      </if>
+      <if test="estado != null" >
+        estado = #{estado,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qs.modelos.qs.usuario_membresia" >
+    update "qs"."usuario_membresia"
+    set id_membresia = #{id_membresia,jdbcType=INTEGER},
+      id_usuario = #{id_usuario,jdbcType=INTEGER},
+      fecha_compra = #{fecha_compra,jdbcType=DATE},
+      estado = #{estado,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

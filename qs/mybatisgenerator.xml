@@ -5,7 +5,7 @@
 
 <generatorConfiguration>
 
-	<classPathEntry location="‪‪c:\Users\Andres\Desktop\postgresql-9.4.jar" />
+	<classPathEntry location="C:\Users\jarbo\Documents\postgresql-42.0.0.jar" />
 
 	<!-- Generaremos para MyBatis versión 3 -->
 	<context id="postgres" targetRuntime="MyBatis3">
@@ -35,7 +35,7 @@
 		</javaClientGenerator>
 		
 		<!-- Mapeo de Tablas -->
- 		<!-- 
+ 		<!--
 		<table schema="qs" tableName="usuario" delimitIdentifiers="true" domainObjectName="usuario">
 			<property name="useActualColumnNames" value="true"/>
 			<generatedKey column="id" sqlStatement="select nextval ('qs.usuario_id_seq');"/>

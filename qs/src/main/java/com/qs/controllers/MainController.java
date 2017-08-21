@@ -51,7 +51,7 @@ public class MainController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		
 		usuario user = serviceUsuario.getUsuarioService(auth.getName());
-		membresia mem = serviceMembresia.getMembresiaService(user.getMembresia_id());
+		membresia mem = serviceMembresia.getMembresiaService(user.getId());
 		
 		List<contenido> contenidos = serviceContenido.getContenido_MembresiaService(mem.getId());
 		
