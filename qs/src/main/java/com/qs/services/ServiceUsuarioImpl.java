@@ -40,9 +40,10 @@ public class ServiceUsuarioImpl implements ServiceUsuario {
 		try {
 			JSONObject data = new JSONObject(mens);
 			SendEmailRequest request = new SendEmailRequest();
-			request.setTo("");
-			request.setSubject("QS - Contactanos");  // prop language
-			String str = data.getString("mensaje") + " - by: " + data.getString("nombre");
+			request.setTo("quantsciencesas@gmail.com");
+			request.setSubject("QS - Contáctanos");  // prop language
+			String str = data.getString("mensaje") + "<br>" + data.getString("nombre") + " - " 
+			+ data.getString("email") + "<br>" + "Cel:" + data.getString("telefono");
 			request.setContent(str);
 			return sMail.sendMail(request);
 			

@@ -49,7 +49,7 @@ public class ServiceMailImpl implements ServiceMail {
 			MimeMessage message = new MimeMessage(mailSession);
 	
 			message.setSubject(emailRequest.getSubject());
-			message.setContent(emailRequest.getContent(), "text/html; charset=UTF-8");		
+			message.setContent(emailRequest.getContent(), "text/html;charset=UTF-8");		
 			Address[] from = InternetAddress.parse(SMTP_EMAIL_DOMAIN);// Your domain email
 			message.addFrom(from);
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(emailRequest.getTo())); // Send email To (Type email ID that you want to send)
