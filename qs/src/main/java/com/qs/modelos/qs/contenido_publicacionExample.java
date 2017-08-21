@@ -224,66 +224,6 @@ public class contenido_publicacionExample {
             return (Criteria) this;
         }
 
-        public Criteria andId_publicacionIsNull() {
-            addCriterion("id_publicacion is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionIsNotNull() {
-            addCriterion("id_publicacion is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionEqualTo(Integer value) {
-            addCriterion("id_publicacion =", value, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionNotEqualTo(Integer value) {
-            addCriterion("id_publicacion <>", value, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionGreaterThan(Integer value) {
-            addCriterion("id_publicacion >", value, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionGreaterThanOrEqualTo(Integer value) {
-            addCriterion("id_publicacion >=", value, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionLessThan(Integer value) {
-            addCriterion("id_publicacion <", value, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionLessThanOrEqualTo(Integer value) {
-            addCriterion("id_publicacion <=", value, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionIn(List<Integer> values) {
-            addCriterion("id_publicacion in", values, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionNotIn(List<Integer> values) {
-            addCriterion("id_publicacion not in", values, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionBetween(Integer value1, Integer value2) {
-            addCriterion("id_publicacion between", value1, value2, "id_publicacion");
-            return (Criteria) this;
-        }
-
-        public Criteria andId_publicacionNotBetween(Integer value1, Integer value2) {
-            addCriterion("id_publicacion not between", value1, value2, "id_publicacion");
-            return (Criteria) this;
-        }
-
         public Criteria andId_multimediaIsNull() {
             addCriterion("id_multimedia is null");
             return (Criteria) this;
@@ -401,6 +341,76 @@ public class contenido_publicacionExample {
 
         public Criteria andOrder_publicacionNotBetween(Long value1, Long value2) {
             addCriterion("order_publicacion not between", value1, value2, "order_publicacion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionIsNull() {
+            addCriterion("publicion is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionIsNotNull() {
+            addCriterion("publicion is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionEqualTo(String value) {
+            addCriterion("publicion =", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionNotEqualTo(String value) {
+            addCriterion("publicion <>", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionGreaterThan(String value) {
+            addCriterion("publicion >", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionGreaterThanOrEqualTo(String value) {
+            addCriterion("publicion >=", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionLessThan(String value) {
+            addCriterion("publicion <", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionLessThanOrEqualTo(String value) {
+            addCriterion("publicion <=", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionLike(String value) {
+            addCriterion("publicion like", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionNotLike(String value) {
+            addCriterion("publicion not like", value, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionIn(List<String> values) {
+            addCriterion("publicion in", values, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionNotIn(List<String> values) {
+            addCriterion("publicion not in", values, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionBetween(String value1, String value2) {
+            addCriterion("publicion between", value1, value2, "publicion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPublicionNotBetween(String value1, String value2) {
+            addCriterion("publicion not between", value1, value2, "publicion");
             return (Criteria) this;
         }
     }

@@ -2,9 +2,12 @@ package com.qs.services;
 
 import java.util.List;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qs.bean.SendEmailRequest;
 import com.qs.dao.qs.usuarioMapper;
 import com.qs.modelos.qs.usuario;
 import com.qs.modelos.qs.usuarioExample;
@@ -14,6 +17,9 @@ public class ServiceUsuarioImpl implements ServiceUsuario {
 
 	@Autowired
 	usuarioMapper uMapper;
+	
+	@Autowired
+	ServiceMail sMail;
 	
 	public usuario getUsuarioService(String correo) {
 		usuarioExample uExample = new usuarioExample();
@@ -27,6 +33,24 @@ public class ServiceUsuarioImpl implements ServiceUsuario {
 
 	public boolean insertUsuarioService(usuario user) {
 		return uMapper.insert(user) == 1;
+	}
+
+	public boolean sendMailtoQs(String mens) {
+		
+		try {
+			JSONObject data = new JSONObject(mens);
+			SendEmailRequest request = new SendEmailRequest();
+			request.setTo("");
+			request.setSubject("QS - Contactanos");  // prop language
+			String str = data.getString("mensaje") + " - by: " + data.getString("nombre");
+			request.setContent(str);
+			return sMail.sendMail(request);
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 
 }

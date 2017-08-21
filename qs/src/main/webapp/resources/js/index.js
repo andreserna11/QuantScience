@@ -2,6 +2,10 @@ $('#btnRegistrar').on('click', function() {
 	registarUsuario();
 });
 
+$('#btnContact').on('click', function() {
+	enviarCorreoContacto();
+});
+
 function registarUsuario() {
 	var usuario = {
 		"nombre" : $('#nombreRegister').val(),
@@ -22,6 +26,33 @@ function registarUsuario() {
         		alert("Se registro Correctamente");
         	} else {
         		alert("Fallo en el registro");
+        	}
+        },
+        error: function (response) {
+        	alert(response);
+        }
+	});
+}
+
+function enviarCorreoContacto(){
+	var mensaje = {
+		"nombre" : $('#nombreContact').val(),
+		"telefono" : $('#telefonoContact').val(),
+		"email" : $('#emailContact').val(),
+		"mensaje": $('#mensajeContact').val()
+	};
+	
+	$.ajax({
+        url:			'mailContact',
+        type:			'POST',
+        contentType: 	"application/json",
+        async:			false,
+        data:  			JSON.stringify(mensaje),
+        success:  function (response) {
+        	if(response){
+        		alert("Se envio Correctamente");
+        	} else {
+        		alert("Fallo en el envio");
         	}
         },
         error: function (response) {

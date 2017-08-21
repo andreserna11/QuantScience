@@ -4,9 +4,9 @@
   <resultMap id="BaseResultMap" type="com.qs.modelos.qs.contenido_publicacion" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="id_contenido" property="id_contenido" jdbcType="INTEGER" />
-    <result column="id_publicacion" property="id_publicacion" jdbcType="INTEGER" />
     <result column="id_multimedia" property="id_multimedia" jdbcType="INTEGER" />
     <result column="order_publicacion" property="order_publicacion" jdbcType="BIGINT" />
+    <result column="publicion" property="publicion" jdbcType="CHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, id_contenido, id_publicacion, id_multimedia, order_publicacion
+    id, id_contenido, id_multimedia, order_publicacion, publicion
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qs.modelos.qs.contenido_publicacionExample" >
     select
@@ -100,10 +100,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.qs.modelos.qs.contenido_publicacion" >
-    insert into "qs"."contenido_publicacion" (id, id_contenido, id_publicacion, 
-      id_multimedia, order_publicacion)
-    values (#{id,jdbcType=INTEGER}, #{id_contenido,jdbcType=INTEGER}, #{id_publicacion,jdbcType=INTEGER}, 
-      #{id_multimedia,jdbcType=INTEGER}, #{order_publicacion,jdbcType=BIGINT})
+    insert into "qs"."contenido_publicacion" (id, id_contenido, id_multimedia, 
+      order_publicacion, publicion)
+    values (#{id,jdbcType=INTEGER}, #{id_contenido,jdbcType=INTEGER}, #{id_multimedia,jdbcType=INTEGER}, 
+      #{order_publicacion,jdbcType=BIGINT}, #{publicion,jdbcType=CHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.qs.modelos.qs.contenido_publicacion" >
     insert into "qs"."contenido_publicacion"
@@ -114,14 +114,14 @@
       <if test="id_contenido != null" >
         id_contenido,
       </if>
-      <if test="id_publicacion != null" >
-        id_publicacion,
-      </if>
       <if test="id_multimedia != null" >
         id_multimedia,
       </if>
       <if test="order_publicacion != null" >
         order_publicacion,
+      </if>
+      <if test="publicion != null" >
+        publicion,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -131,14 +131,14 @@
       <if test="id_contenido != null" >
         #{id_contenido,jdbcType=INTEGER},
       </if>
-      <if test="id_publicacion != null" >
-        #{id_publicacion,jdbcType=INTEGER},
-      </if>
       <if test="id_multimedia != null" >
         #{id_multimedia,jdbcType=INTEGER},
       </if>
       <if test="order_publicacion != null" >
         #{order_publicacion,jdbcType=BIGINT},
+      </if>
+      <if test="publicion != null" >
+        #{publicion,jdbcType=CHAR},
       </if>
     </trim>
   </insert>
@@ -157,14 +157,14 @@
       <if test="record.id_contenido != null" >
         id_contenido = #{record.id_contenido,jdbcType=INTEGER},
       </if>
-      <if test="record.id_publicacion != null" >
-        id_publicacion = #{record.id_publicacion,jdbcType=INTEGER},
-      </if>
       <if test="record.id_multimedia != null" >
         id_multimedia = #{record.id_multimedia,jdbcType=INTEGER},
       </if>
       <if test="record.order_publicacion != null" >
         order_publicacion = #{record.order_publicacion,jdbcType=BIGINT},
+      </if>
+      <if test="record.publicion != null" >
+        publicion = #{record.publicion,jdbcType=CHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -175,9 +175,9 @@
     update "qs"."contenido_publicacion"
     set id = #{record.id,jdbcType=INTEGER},
       id_contenido = #{record.id_contenido,jdbcType=INTEGER},
-      id_publicacion = #{record.id_publicacion,jdbcType=INTEGER},
       id_multimedia = #{record.id_multimedia,jdbcType=INTEGER},
-      order_publicacion = #{record.order_publicacion,jdbcType=BIGINT}
+      order_publicacion = #{record.order_publicacion,jdbcType=BIGINT},
+      publicion = #{record.publicion,jdbcType=CHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -188,14 +188,14 @@
       <if test="id_contenido != null" >
         id_contenido = #{id_contenido,jdbcType=INTEGER},
       </if>
-      <if test="id_publicacion != null" >
-        id_publicacion = #{id_publicacion,jdbcType=INTEGER},
-      </if>
       <if test="id_multimedia != null" >
         id_multimedia = #{id_multimedia,jdbcType=INTEGER},
       </if>
       <if test="order_publicacion != null" >
         order_publicacion = #{order_publicacion,jdbcType=BIGINT},
+      </if>
+      <if test="publicion != null" >
+        publicion = #{publicion,jdbcType=CHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -203,9 +203,9 @@
   <update id="updateByPrimaryKey" parameterType="com.qs.modelos.qs.contenido_publicacion" >
     update "qs"."contenido_publicacion"
     set id_contenido = #{id_contenido,jdbcType=INTEGER},
-      id_publicacion = #{id_publicacion,jdbcType=INTEGER},
       id_multimedia = #{id_multimedia,jdbcType=INTEGER},
-      order_publicacion = #{order_publicacion,jdbcType=BIGINT}
+      order_publicacion = #{order_publicacion,jdbcType=BIGINT},
+      publicion = #{publicion,jdbcType=CHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
