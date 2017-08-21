@@ -222,7 +222,7 @@
             <div class="col s6 contactBackground">
               <div class="row"><h5>Déjanos un mensaje</h5></div>
                 <div class="row">
-                  <form class="col s12" action="" method="post" enctype="text/plain">
+                  <div class="col s12">
                     <div class="row">
                       <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -246,11 +246,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Enviar
+                        <button id="btnContact" class="btn waves-effect waves-light blue darken-2">Enviar
                           <i class="material-icons right">send</i>
                         </button>
                     </div>
-                  </form>
+                  </div>
                 </div>
             </div>
           </div>

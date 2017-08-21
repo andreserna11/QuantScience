@@ -60,11 +60,6 @@
 			<generatedKey column="id" sqlStatement="select nextval ('qs.multimedia_id_seq');"/>
 		</table>
 		
-		<table schema="qs" tableName="publicacion" delimitIdentifiers="true" domainObjectName="publicacion">
-			<property name="useActualColumnNames" value="true"/>
-			<generatedKey column="id" sqlStatement="select nextval ('qs.publicacion_id_seq');"/>
-		</table>
-		
 		<table schema="qs" tableName="contenido_publicacion" delimitIdentifiers="true" domainObjectName="contenido_publicacion">
 			<property name="useActualColumnNames" value="true"/>
 		</table>

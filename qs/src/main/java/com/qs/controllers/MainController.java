@@ -68,6 +68,10 @@ public class MainController {
 		return serviceUsuario.insertUsuarioService(user);
 	}
 	
+	@RequestMapping(value="/mailContact", method = RequestMethod.POST)
+	public @ResponseBody boolean sendMailContact(@RequestBody String mens){
+		return serviceUsuario.sendMailtoQs(mens);
+	}
 
 	@RequestMapping(value="/404")
 	 public ModelAndView notFound(HttpServletRequest request){

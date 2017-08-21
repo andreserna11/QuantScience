@@ -5,11 +5,11 @@ public class contenido_publicacion {
 
     private Integer id_contenido;
 
-    private Integer id_publicacion;
-
     private Integer id_multimedia;
 
     private Long order_publicacion;
+
+    private String publicion;
 
     public Integer getId() {
         return id;
@@ -27,14 +27,6 @@ public class contenido_publicacion {
         this.id_contenido = id_contenido;
     }
 
-    public Integer getId_publicacion() {
-        return id_publicacion;
-    }
-
-    public void setId_publicacion(Integer id_publicacion) {
-        this.id_publicacion = id_publicacion;
-    }
-
     public Integer getId_multimedia() {
         return id_multimedia;
     }
@@ -49,5 +41,13 @@ public class contenido_publicacion {
 
     public void setOrder_publicacion(Long order_publicacion) {
         this.order_publicacion = order_publicacion;
+    }
+
+    public String getPublicion() {
+        return publicion;
+    }
+
+    public void setPublicion(String publicion) {
+        this.publicion = publicion;
     }
 }
