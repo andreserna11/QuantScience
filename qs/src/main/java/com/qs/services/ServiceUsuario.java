@@ -11,4 +11,6 @@ public interface ServiceUsuario {
 	
 	public boolean sendMailtoQs(String mens);
 	
+	public boolean updateUsuarioService(usuario user);
+	
 }

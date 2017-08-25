@@ -80,5 +80,19 @@ public class ServiceUsuarioImpl implements ServiceUsuario {
 		}
 
 	}
+	
+	public boolean updateUsuarioService(usuario us) {
+		usuarioExample uExample = new usuarioExample();
+		uExample.or().andEmailEqualTo(us.getEmail());
+		
+		try {
+			uMapper.updateByExampleSelective(us, uExample);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+
+	}
 
 }

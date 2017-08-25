@@ -6,6 +6,10 @@ $('#btnContact').on('click', function() {
 	enviarCorreoContacto();
 });
 
+$('#btnActualizar').on('click', function() {
+	actualizarUsuario();
+});
+
 $('#continuarPaso1').on('click', function(){
 	var mem = $('#Membresias input[type="radio"]:checked').val();
 	if(mem == 1 || mem == 2 || mem == 3){
@@ -75,6 +79,32 @@ function enviarCorreoContacto(){
 	       },
 	       error: function (response) {
 	       		alert(response);
+	       }
+	});
+}
+
+function actualizarUsuario() {
+	var usuario = {
+		"email" : $('.email').attr('mail'),
+		"telefono" : $('#telefonoActualizar').val(),
+		"clave" : $('#contrasenaActualizar').val()
+	}
+	
+	$.ajax({
+	       url:	'updateUser',
+	       type:	'POST',
+	       contentType: "application/json",
+	       data:   JSON.stringify(usuario),
+	       success:  function (response) {
+		       	if(response){
+		       		Materialize.toast('Se ha actualizado tu cuenta correctamente', 4000);
+		       		$('#editarUsuarioModal').modal('close');
+		       	} else {
+		       		Materialize.toast('Fallo en la actualización', 4000);
+		       	}
+	       },
+	       error: function (response) {
+	       		console.log(response);
 	       }
 	});
 }

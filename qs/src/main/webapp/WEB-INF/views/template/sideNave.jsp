@@ -11,7 +11,7 @@
 				<a><img class="circle grey darken-4" src="<c:url value='/resources/img/Btc.png'/>"></a>
 				<a><span class="white-text name">${usuario.getNombre()}</span></a>
 				<c:set var="rol" value="${fn:substring(membresia.getNombre(), 5, 15)}" />
-				<a><span class="white-text email">${usuario.getEmail()} - ${rol}</span></a>
+				<a><span class="white-text email" mail="${usuario.getEmail()}">${usuario.getEmail()} - ${rol}</span></a>
 			</div>
 		</li>
 		<li><a class="waves-effect" href="dashboard"><i class="material-icons">&#xE88A;</i>Dashboard</a></li>
@@ -47,22 +47,22 @@
 		            	<div class="row">	                            
 			              	<div class="input-field col s12">
 				                <i class="material-icons prefix">phone</i>
-				                <input id="telefonoRegister" type="text" class="validate" required>
-				                <label for="telefonoRegister">Teléfono</label>
+				                <input id="telefonoActualizar" type="text" class="validate" required>
+				                <label for="telefonoActualizar">Teléfono</label>
 			              	</div>                   
 			              	<div class="input-field col s12">
 			                	<i class="material-icons prefix">&#xE0DA;</i>
-			                	<input id="contrasenaRegister" type="password" class="validate" required>
-			                	<label for="contrasenaRegister">Contraseña</label>
+			                	<input id="contrasenaActualizar" type="password" class="validate" required>
+			                	<label for="contrasenaActualizar">Contraseña</label>
 			              	</div>
 			              	<div class="input-field col s12">
 			                	<i class="material-icons prefix">&#xE0DA;</i>
-			                	<input id="contrasena2Register" type="password" class="validate" required>
-			                	<label for="contrasena2Register">Repetir contraseña</label>
+			                	<input id="contrasena2Actualizar" type="password" class="validate" required>
+			                	<label for="contrasena2Actualizar">Repetir contraseña</label>
 			              	</div>
 		            	</div>
 		            	<div class="row">
-		               	 	<button id="btnRegistrar" class="btn waves-effect waves-light blue darken-2">Actualizar
+		               	 	<button id="btnActualizar" class="btn waves-effect waves-light blue darken-2">Actualizar
 			                  	<i class="material-icons right">send</i>
 			                </button>
 		            	</div>

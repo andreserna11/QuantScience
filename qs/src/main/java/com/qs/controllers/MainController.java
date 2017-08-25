@@ -73,6 +73,11 @@ public class MainController {
 	public @ResponseBody boolean sendMailContact(@RequestBody String mens){
 		return serviceUsuario.sendMailtoQs(mens);
 	}
+	
+	@RequestMapping(value="/updateUser", method = RequestMethod.POST)
+	public @ResponseBody boolean updateUser(@RequestBody UsuarioMembresia user){
+		return serviceUsuario.updateUsuarioService(user);
+	}
 
 	@RequestMapping(value="/404")
 	 public ModelAndView notFound(HttpServletRequest request){
