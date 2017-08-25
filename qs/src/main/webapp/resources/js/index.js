@@ -43,9 +43,19 @@ function registarUsuario() {
 	       data:   JSON.stringify(usuario),
 	       success:  function (response) {
 		       	if(response){
-		       		Materialize.toast('Te has registrado correctamente, aproximadamente en 30 minutos se activará tu cuenta', 4000);
+		       		Materialize.toast('Te has registrado correctamente, ya puedes ingresar', 4000);
+		       		var mem = $('#Membresias input[type="radio"]:checked').val();
 		       		$('#registroModal').modal('close');
-		        	$('#pasarelaPago').modal('open');
+		       		if(mem != 1){
+		       			Materialize.toast('Te has registrado correctamente, aproximadamente en 30 minutos se activará tu cuenta', 4000);
+		       			Materialize.toast('Después de verificar tu pago', 4000);
+		       			if(mem == 2){
+		       				$('#pasarelaPago').modal('open');
+		       			} else {
+		       				$('#pasarelaPago1').modal('open');
+		       			}
+		       			
+		       		}
 		       	} else {
 		       		Materialize.toast('Fallo en el registro', 4000);
 		       	}

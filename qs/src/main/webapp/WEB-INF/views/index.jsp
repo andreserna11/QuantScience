@@ -284,20 +284,6 @@
 	</section>
 
 	<section id="tradingEnVivo">
-		<div class="parallax-container valign-wrapper">
-			<div class="section no-pad-bot">
-				<div class="container">
-					<div class="row center">
-						<h5 class="header col s12 light">A modern responsive
-							front-end framework based on Material Design</h5>
-					</div>
-				</div>
-			</div>
-			<div class="parallax">
-				<img src="<c:url value='/resources/img/background2.jpg'/>"
-					alt="Unsplashed background img 2">
-			</div>
-		</div>
 	</section>
 
 	<section id="contact_us">
@@ -758,20 +744,21 @@
 			<div class="divider"></div>
 			<div class="row">
 				<div class="col s12">
-					<p class="grey-text text-darken-2 center">Para completar el</p>
+					<p class="grey-text text-darken-2 center">Para completar tu registro, debes realizar el pago al siguiente link:</p>					
+				</div>
+				<div class="col s12">
+					
+				</div>
+				<div class="col s12 center">
+					<h1><sup>$</sup>99</h1>
+				</div>	
+				<div class="col s12 center">
+					<a href="https://payco.link/35528"  target="_blank">Pagar ahora</a>
 				</div>
 			</div>
-			<div class="divider"></div>
-			<div class="section">
-				<div class="row">
-					<div class="col s12 center">
-						<div class="row">
-							<button id="btnRegistrar"
-								class="btn waves-effect waves-light blue darken-2">
-								Registrarse <i class="material-icons right">send</i>
-							</button>
-						</div>
-					</div>
+			<div class="row">
+				<div class="col s12 center">
+					<img id="qs-black" src="<c:url value='resources/img/QS-logo-black.jpg'/>">
 				</div>
 			</div>
 		</div>
@@ -781,7 +768,45 @@
 			</p>
 		</div>
 	</div>
-
+	
+	<div id="pasarelaPago1" class="modal modal-fixed-footer modal-scroll">
+		<div class="modal-content">
+			<div class="row">
+				<div class="col s1 left">
+					<a href="#membresiaModal"><i
+						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
+				</div>
+				<div class="col s11">
+					<h4 class="grey-text text-darken-2 center">REGISTRO</h4>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div class="row">
+				<div class="col s12">
+					<p class="grey-text text-darken-2 center">Para completar tu registro, debes realizar el pago al siguiente link:</p>					
+				</div>
+				<div class="col s12">
+					
+				</div>
+				<div class="col s12 center">
+					<h1><sup>$</sup>399</h1>
+				</div>	
+				<div class="col s12 center">
+					<a href="https://payco.link/35529" target="_blank">Pagar ahora</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 center">
+					<img id="qs-black" src="<c:url value='resources/img/QS-logo-black.jpg'/>">
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer grey lighten-3">
+			<p class="left white-text grey-text text-darken-2">
+				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
+			</p>
+		</div>
+	</div>
 	<div id="registroModal2" class="modal modal-fixed-footer modal-scroll">
 		<div class="modal-content">
 			<div class="row">
