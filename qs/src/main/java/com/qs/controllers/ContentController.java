@@ -1,6 +1,5 @@
 package com.qs.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +11,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.qs.bean.PublicacionArchivo;
 import com.qs.modelos.qs.contenido;
 import com.qs.modelos.qs.membresia;
-import com.qs.modelos.qs.multimedia;
 import com.qs.modelos.qs.usuario;
 import com.qs.services.ServiceContenido;
-import com.qs.services.ServiceMC;
 import com.qs.services.ServiceMembresia;
 import com.qs.services.ServiceMultimedia;
 import com.qs.services.ServiceUsuario;
@@ -33,9 +31,6 @@ public class ContentController {
 
 	@Autowired
 	ServiceMembresia serviceMembresia;
-
-	@Autowired
-	ServiceMC serviceMC;
 
 	@Autowired
 	ServiceContenido serviceContenido;
@@ -54,16 +49,10 @@ public class ContentController {
 		contenido con = serviceContenido.getContenidoIdService(id);
 
 		if (id != null) {
-			List<multimedia> mList = serviceMultimedia.getMultimedia_Contenido(id);
-			List<String> files = new ArrayList<String>();
-			for (multimedia m : mList) {
-				if (m.getRuta() != null) {
-					files.add(serviceMultimedia.getArchivo_Contenido(m));
-				}
-			}
+			List<PublicacionArchivo> publicates = serviceMultimedia.getMultimedia_Contenido(id);
 
 			model.setViewName("decorador/content");
-			model.addObject("videos", files);
+			model.addObject("publicaciones", publicates);
 		} else {
 			model.setViewName("decorador/dashboard");
 		}
