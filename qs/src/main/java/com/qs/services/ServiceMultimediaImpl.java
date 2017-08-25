@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.qs.bean.PublicacionArchivo;
@@ -27,6 +28,9 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 	
 	@Autowired
 	multimediaMapper mMapper;
+	
+	@Value("${core.url.qs.directory}")
+	private String SMTP_HOST_NAME;
 
 	public List<PublicacionArchivo> getMultimedia_Contenido(Integer id) {
 		contenido_publicacionExample cpExample = new contenido_publicacionExample();
@@ -47,10 +51,10 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 			
 			if(contenido_publicacion.getId_multimedia() != null){
 				multimedia m = mMapper.selectByPrimaryKey(contenido_publicacion.getId_multimedia());
+				System.out.println(SMTP_HOST_NAME + m.getRuta());
 				
 				if(m.getRuta() != null){
-					m.setRuta(m.getRuta().replace("\\", "\\\\"));
-					pa.setBase64(getArchivo_Contenido(m));
+					pa.setBase64(getArchivo_Contenido(SMTP_HOST_NAME + m.getRuta()));
 				}
 			}
 			
@@ -60,10 +64,10 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 		return mResult;
 	}
 
-	public String getArchivo_Contenido(multimedia m) {
+	public String getArchivo_Contenido(String ruta) {
 		String encoded = "";
 		try {
-			File f = new File(m.getRuta());
+			File f = new File(ruta);
 			InputStream in = new BufferedInputStream(new FileInputStream(f));
 			byte[] bytes = IOUtils.toByteArray(in);
 			encoded = Base64.encodeBase64String(bytes);
