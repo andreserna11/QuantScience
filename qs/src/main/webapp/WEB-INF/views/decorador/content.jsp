@@ -32,7 +32,6 @@
 			<div class="row">
 				<div class="col s12 center">
 					${publication.getPublicacion()}
-					
 					<video width="600" height="400" controls>
 	  					<source type="video/mp4" src="data:video/mp4;base64,${publication.getBase64()}">
 	  				</video>
