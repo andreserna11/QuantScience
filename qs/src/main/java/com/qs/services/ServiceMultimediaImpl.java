@@ -12,6 +12,7 @@ import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qs.bean.PublicacionArchivo;
 import com.qs.dao.qs.contenido_publicacionMapper;
 import com.qs.dao.qs.multimediaMapper;
 import com.qs.modelos.qs.contenido_publicacion;
@@ -27,22 +28,33 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 	@Autowired
 	multimediaMapper mMapper;
 
-	public List<multimedia> getMultimedia_Contenido(Integer id) {
+	public List<PublicacionArchivo> getMultimedia_Contenido(Integer id) {
 		contenido_publicacionExample cpExample = new contenido_publicacionExample();
+		cpExample.setOrderByClause("order_publicacion ASC");
 		cpExample.or().andId_contenidoEqualTo(id);
 
 		List<contenido_publicacion> cpResult = cpMapper.selectByExample(cpExample);
 		
-		List<multimedia> mResult = new ArrayList<multimedia>();
+		List<PublicacionArchivo> mResult = new ArrayList<PublicacionArchivo>();
+		
 		for (contenido_publicacion contenido_publicacion : cpResult) {
+			PublicacionArchivo pa = new PublicacionArchivo();
+			pa.setId(contenido_publicacion.getId());
+			pa.setId_contenido(contenido_publicacion.getId_contenido());
+			pa.setId_multimedia(contenido_publicacion.getId_multimedia());
+			pa.setOrder_publicacion(contenido_publicacion.getOrder_publicacion());
+			pa.setPublicacion(contenido_publicacion.getPublicacion());
 			
-			multimedia m = mMapper.selectByPrimaryKey(contenido_publicacion.getId_multimedia());
-			
-			if(m.getRuta() != null){
-				m.setRuta(m.getRuta().replace("\\", "\\\\"));
-				mResult.add(m);
+			if(contenido_publicacion.getId_multimedia() != null){
+				multimedia m = mMapper.selectByPrimaryKey(contenido_publicacion.getId_multimedia());
+				
+				if(m.getRuta() != null){
+					m.setRuta(m.getRuta().replace("\\", "\\\\"));
+					pa.setBase64(getArchivo_Contenido(m));
+				}
 			}
 			
+			mResult.add(pa);
 		}
 		
 		return mResult;
