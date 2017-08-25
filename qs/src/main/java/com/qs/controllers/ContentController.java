@@ -43,7 +43,7 @@ public class ContentController {
 	@RequestMapping(value = "/content", method = RequestMethod.GET)
 	public ModelAndView loadContent(@RequestParam(value = "id", required = false) Integer id) {
 		ModelAndView model = new ModelAndView();
-		
+
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
 		usuario user = serviceUsuario.getUsuarioService(auth.getName());
@@ -52,12 +52,14 @@ public class ContentController {
 		List<contenido> contenidos = serviceContenido.getContenido_MembresiaService(mem.getId());
 
 		contenido con = serviceContenido.getContenidoIdService(id);
-		
+
 		if (id != null) {
 			List<multimedia> mList = serviceMultimedia.getMultimedia_Contenido(id);
 			List<String> files = new ArrayList<String>();
 			for (multimedia m : mList) {
-				files.add(serviceMultimedia.getArchivo_Contenido(m));
+				if (m.getRuta() != null) {
+					files.add(serviceMultimedia.getArchivo_Contenido(m));
+				}
 			}
 
 			model.setViewName("decorador/content");

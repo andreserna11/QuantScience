@@ -35,9 +35,14 @@ public class ServiceMultimediaImpl implements ServiceMultimedia {
 		
 		List<multimedia> mResult = new ArrayList<multimedia>();
 		for (contenido_publicacion contenido_publicacion : cpResult) {
+			
 			multimedia m = mMapper.selectByPrimaryKey(contenido_publicacion.getId_multimedia());
-			m.setRuta(m.getRuta().replace("\\", "\\\\"));
-			mResult.add(m);
+			
+			if(m.getRuta() != null){
+				m.setRuta(m.getRuta().replace("\\", "\\\\"));
+				mResult.add(m);
+			}
+			
 		}
 		
 		return mResult;

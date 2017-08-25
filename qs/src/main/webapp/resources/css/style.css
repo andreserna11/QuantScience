@@ -5,6 +5,10 @@
  *
  * Made By MaterializeCSS.com
  */
+#p700{
+    width: 700px;
+    text-align: center;	
+}
 
  nav ul a,
  nav .brand-logo {

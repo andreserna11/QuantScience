@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.qs.modelos.qs.usuario;
 import com.qs.modelos.qs.membresia;
+import com.qs.bean.UsuarioMembresia;
 import com.qs.modelos.qs.contenido;
 import com.qs.services.ServiceUsuario;
 import com.qs.services.ServiceMembresia;
@@ -64,7 +65,7 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/register", method = RequestMethod.POST)
-	public @ResponseBody boolean registeUser(@RequestBody usuario user){
+	public @ResponseBody boolean registeUser(@RequestBody UsuarioMembresia user){
 		return serviceUsuario.insertUsuarioService(user);
 	}
 	
