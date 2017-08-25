@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s10">
+			<div class="col s12">
 				<p>${contenido.getDescripcion()}		
 				</p>
 				
