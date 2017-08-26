@@ -82,10 +82,10 @@
 			</div>
 		</div>
 	</section>
+	<!-- 
 	<section>
 		<div class="container">
 			<div class="section">
-				<!--   Icon Section   -->
 				<div class="row">
 					<div class="col s12 center">
 						<h4>TESTIMONIOS</h4>
@@ -107,7 +107,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="Membresias" class="background-membresia">
 		<form id="form1" method="POST" action="/comprar"></form>

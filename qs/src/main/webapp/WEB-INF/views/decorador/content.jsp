@@ -32,9 +32,12 @@
 			<div class="row">
 				<div class="col s12 center">
 					${publication.getPublicacion()}
-					<video width="600" height="400" controls>
-	  					<source type="video/mp4" src="data:video/mp4;base64,${publication.getBase64()}">
-	  				</video>
+					<c:set var = "publicacionV" scope = "session" value = "${publication.getId_multimedia()}"/>
+					<c:if test="${publicacionV != null}">
+						<video width="600" height="400" controls>
+		  					<source type="video/mp4" src="data:video/mp4;base64,${publication.getBase64()}">
+		  				</video>
+	  				</c:if>
 				</div>
 			</div>
 		</c:forEach>
