@@ -15,10 +15,68 @@
     width: 350px;	
 }
 
+#p35{
+	width: 27px;
+}
+
+#coaching-section{
+	display: none;
+}
+
+#p100{
+	width: 100px;
+}
+
 #qs-black{
 	width: 126px;
 }
 
+#qs-white{
+	width: 50px;
+}
+
+#qs-footer{
+	margin-left: initial;
+    margin-right: inherit;
+}
+
+#imgIndex{
+	border: white 2px solid; 
+	width: 160px;
+	height: 120px;
+}
+
+.padding-testimonio{
+	padding-top: 12px;
+}
+
+.background-testimonio{	
+    border-radius: 40px;    
+    margin-top: 50px;	
+	background-color: rgba(242, 242, 242, 0.89);
+}
+
+.img-120{
+	width: 120px;
+}
+
+#pading-cards{
+	margin-bottom: 60px;
+}
+
+#img-calidad{
+	width: 162px;
+	float: left;    
+    margin-left: 155px;
+}
+
+#margin-top-cuadro{
+	margin-top: 32px;
+}
+
+.cajon{
+	border: white 1px solid;
+}
  nav ul a,
  nav .brand-logo {
   color: #444;
@@ -124,11 +182,11 @@ p {
   background-color: #1976D2;
 }
 
-#opt3 {
+#opt1 {
   border: 2px solid #1976D2;
 }
 
-#gratis {
+#avanzado {
   opacity: 0.6;
 }
 
@@ -136,11 +194,11 @@ p {
   opacity: 0.6;
 }
 
-.op3 {
+.op1 {
   color: #1976D2;
 }
 
-.op1, .op2 {
+.op3, .op2 {
   opacity: 0.6;
 }
 

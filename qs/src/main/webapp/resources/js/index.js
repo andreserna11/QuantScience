@@ -11,9 +11,23 @@ $('#btnActualizar').on('click', function() {
 });
 
 $('#continuarPaso1').on('click', function(){
-	var mem = $('#Membresias input[type="radio"]:checked').val();
-	if(mem == 1 || mem == 2 || mem == 3){
-		$('#registroModal').modal('open');	
+	$('#registroModal').modal('open');	
+
+});
+
+$('#continuarPasoPago').on('click', function(){
+	var memm = $('#Membresias-section input[type="radio"]:checked').val();
+	console.log(memm);
+	if(memm == 1){
+		$('#registroModal').modal('open');
+	}else{
+		if(memm == 2){
+			$('#pasarelaPago99').modal('open');
+		}else{
+			if(memm ==3){
+				$('#pasarelaPago399').modal('open');
+			}
+		}
 	}
 });
 
