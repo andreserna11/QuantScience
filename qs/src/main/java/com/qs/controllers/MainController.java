@@ -60,6 +60,13 @@ public class MainController {
 		return model;
 	}
 	
+	@RequestMapping(value="/entrenamientos-futuros")
+	public ModelAndView entrenamientosFuturos(HttpServletRequest request){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("decorador/entrenamiento-futuro");
+		return model;
+	}
+	
 	@RequestMapping(value="/dashboard")
 	public ModelAndView dashboard(HttpServletRequest request){
 		ModelAndView model = new ModelAndView();

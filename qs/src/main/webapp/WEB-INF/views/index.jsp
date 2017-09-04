@@ -23,9 +23,11 @@
 </head>
 <body>
 
-	<nav class="black" role="navigation">
+	<nav class="black nav-index" role="navigation">
 		<div class="nav-wrapper container">
 			<!--      <a id="logo-container" href="#" class="brand-logo"><img src="img/LogoQS2.png"></a>-->
+			<img id="qs-white-nav" class="left" src="<c:url value='/resources/img/Index/QS-Letras.png'/>">
+			
 			<ul class="right hide-on-med-and-down">
 				<li><a class="white-text" href="<c:url value='/'/>">Inicio</a></li>
 				<li><a class="white-text" href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
@@ -91,17 +93,17 @@
 				<div class="row">
 					<div class="col s12">
 						<div class="row">
-							<div class="col s4 cajon">
-								<h5 class="white-text">MEJORA TU CALIDAD & ESTILO DE VIDA</h5>
+							<div class="col s4 cajon center">
+								<h5 class="white-text sombra">MEJORA TU CALIDAD & ESTILO DE VIDA</h5>
 								<p>Convierte el Trading en una Profesión</p>
 							</div>
-							<div class="col s4 cajon">
+							<div class="col s4 cajon center">
 							<br>
-								<h5 class="white-text">TÚ PUEDES SER TRADER</h5><br>								
+								<h5 class="white-text sombra">TÚ PUEDES SER TRADER</h5><br>								
 								<p id="margin-top-cuadro">No importa tu nivel de experiencia</p>
 							</div>
-							<div class="col s4 cajon">
-								<h5 class="white-text">SE PARTE DE NUESTRA COMUNIDAD</h5><br>
+							<div class="col s4 cajon center">
+								<h5 class="white-text sombra">SE PARTE DE NUESTRA COMUNIDAD</h5><br>
 								<p id="margin-top-cuadro">Potencializa tu conocimiento</p>
 							</div>
 						</div>
@@ -130,7 +132,7 @@
 					    </div>
 					    <div class="card-content">
 				      		<span id="pading-cards" class="card-title  grey-text text-darken-4">Introdcción al mercado de las Crytomonedas</span>
-				      		<p><a href="#">Ver Entrenamiento <b>GRATUITO</b></a></p>
+				      		<p><a href="<c:url value='/entrenamientos'/>">Ver Entrenamiento <b>GRATUITO</b></a></p>
 					      	<div>
 					    		<img id="img-calidad" class="center" src="<c:url value='/resources/img/Index/Index11.png'/>">
 					    	</div>
@@ -144,7 +146,7 @@
 						    </div>
 						    <div class="card-content">
 						      	<span id="pading-cards" class="card-title  grey-text text-darken-4">Metología del mercado de Futuros</span>
-				      			<p><a href="#">Ver Entrenamiento</a></p>
+				      			<p><a href="<c:url value='/entrenamientos-futuros'/>">Ver Entrenamiento</a></p>
 						    	<div>
 							    	<img id="img-calidad" class="center" src="<c:url value='/resources/img/Index/Index11.png'/>">
 							    </div>
@@ -158,7 +160,7 @@
 						    </div>
 						    <div class="card-content">
 							    <span class="card-title  grey-text text-darken-4">Básica y Avanzado del Mercado  de Cryptomonedas</span>
-							    <p><a href="#">Ver Entrenamiento</a></p><br>
+							    <p><a href="<c:url value='/entrenamientos'/>">Ver Entrenamiento</a></p><br>
 							    <div>
 							    	<img id="img-calidad" class="center" src="<c:url value='/resources/img/Index/Index11.png'/>">
 							    </div>
@@ -562,7 +564,7 @@
 						<div class="center col s6">
 							<a id="registrate"
 								class="blue-text text-darken-3 modal-action modal-close modal-trigger"
-								href="#membresiaModal">¡Registrate!</a>
+								href="<c:url value='/precios'/>">¡Registrate!</a>
 						</div>
 					</div>
 					<input type="hidden" name="${_csrf.parameterName}"

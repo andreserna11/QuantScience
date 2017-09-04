@@ -48,212 +48,51 @@
 		</div>
 	</nav>
 	
-	<section>		
-		<div class="row">
-			<h4 class="center">OFERTA EDUCATIVA</h4>
+	<section>
+		<div class="container">	
+			<div class="row">
+				<h4 class="center">ENTRENAMIENTO EN MERCADO DE FUTUROS</h4>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col s6 center">
-				<a id="entrenamientos" class="waves-effect waves-light btn blue darken-2" onclick="entrenamiento()">Entrenamientos</a>
-			</div>
-			<div class="col s6 center">
-				<a id="coaching" class="waves-effect waves-light btn grey lighten-2" onclick="coaching()">Coaching</a>
-			</div>
+		
+		<div class="container">
+			<div class="row" id="eFuturos">
+		        <div class="col s5">
+		          <div class="card grey lighten-4">
+		            <div class="card-content">
+		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
+		              <p style="text-align: justify; text-justify: inter-word;">En nuestro entrenamiento avanzado usted tiene la posibilidad de aprender la estrategia profesional con la que nuestros traders operan para obtener los mejores beneficios. En este entrenamiento usted aprenderá el manejo completo de la plataforma de inversión NinjaTrader, todas las herramientas de operación,  y la estrategia que se opera con el constante acompañamiento de nuestros profesionales.<br>
+						En nuestra academia nos diferenciamos ya que para nosotros lo mas importante es que nuestros estudiantes encuentren facilidad y adaptabilidad en el trading, es por eso que también los apoyamos y acompañamos en el desarrollo de sus propias estrategias.</p>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col s7">
+		          <div class="card grey lighten-4">
+		            <div class="card-content">
+		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>
+		              <p>
+		              	<ul>
+		              		<li>&#9679; Mercado de futuros</li>
+		              		<li>&#9679; Como crear una estrategia de trading</li>
+		              		<li>&#9679; Movimiento del mercado</li>
+		              		<li>&#9679; Tipos de movimientos direccionales</li>
+		              		<li>&#9679; Indicadores y su uso</li>
+		              		<li>&#9679; Operando la estrategia</li>
+		              		<li>&#9679; Métricas para la evaluación de una estrategia</li>
+		              		<li>&#9679; Gestión monetaria y de riesgo</li>		              		
+		              	</ul>
+		              </p>
+		              <br>
+		              <p class="center"><a href="https://payco.link/36813"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
+					  <a class="center" href="https://payco.link/36813"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a></p>
+		            </div>
+		          </div>
+		        </div>
+		        <br>
+		        <br>
+		    </div>		    		   
 		</div>
 	</section>
-	
-	<section id="Membresias-section" class="background-membresia">
-		<form id="form1" method="POST" action="/comprar"></form>
-		<div class="container">
-			<div class="row">
-				<div class="col s6"></div>
-				<div class="col s2 center">
-					<div class="cellContent" id="opt1" onclick="opt1(); check1()">
-						<div class="selborder" id="gratis">
-							Gratuito <input type="radio" name="membership" value="1" id="v1"
-								form="form1" checked>
-						</div>
-					</div>
-				</div>
-				<div class="col s2 center">
-					<div class="cellContent" id="opt2" onclick="opt2(); check2()">
-						<div class="selborder" id="basico">
-							Básico <input type="radio" name="membership" value="2" id="v2"
-								form="form1">
-						</div>
-					</div>
-				</div>
-				<div class="col s2 center">
-					<div class="cellContent" id="opt3" onclick="opt3(); check3()">
-						<div class="selborder" id="avanzado">
-							Avanzado <input type="radio" name="membership" value="3" id="v3"
-								form="form1">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<span><b>Suscripción</b></span>
-				</div>
-				<div class="col s2 center">
-					<b class="op1">$&nbsp;0</b>
-				</div>
-				<div class="col s2 center">
-					<b class="op2">$&nbsp;99</b>
-				</div>
-				<div class="col s2 center">
-					<b class="op3">$&nbsp;399</b>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6 ">Introducción al mercado de Cryptodivisas</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Soportes y Resistencias</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Operación en Vivo de Cryptodivisas</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Introducción al análisis técnico</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE876;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Acceso a la red social de Trading</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<b class="op2">2 Semanas</b>
-				</div>
-				<div class="col s2 center">
-					<b class="op3">8 Semanas</b>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Análisis fundamental de las Cryptodivisas</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Patrones psicológicos del mercado</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">Money Management en Cryptodivisas</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="divider"></div>
-				<div class="col s6">
-					Conceptualización de la <b>ICO</b> de una cryptodivisa
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op1">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op2">&#xE5CD;</i>
-				</div>
-				<div class="col s2 center">
-					<i class="material-icons op3">&#xE876;</i>
-				</div>
-			</div>
-		</div>
-		<div class="row center">
-			<a id="continuarPasoPago"
-				class="waves-effect waves-light btn blue darken-2">Continuar</a>
-		</div>
-		<br>
-	</section>
-	
-	<section id="coaching-section">
-		<div class="container">
-			<div class="row">
-				<div class="col s6 center">
-					<img id="p350" src="<c:url value='/resources/img/Precios/precios1.png'/>">					
-				</div>
-				<div class="col s6">
-					<p>Obtén una sesión de coaching de aproximadamente media hora donde podrás resolver tus dudas, obtener apoyo para gestionar tu cartera y obtener información valiosa de nosotros.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s6"></div>
-				<div class="col s6">
-					<div class="center">
-						<a href="#pasarelaPagoCoaching" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-						<a href="#pasarelaPagoCoaching"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>	
 		
 	<footer class="page-footer blue darken-2">
 		<div class="footer-copyright">
@@ -287,19 +126,8 @@
 			<h4 class="grey-text text-darken-2 center">¡Conéctate!</h4>
 			<div class="divider"></div>
 			<div class="col s12 valign">
-				<form:form id="loginForm" name="loginForm" action="login"
-					method="POST">
-					<c:if test="${not empty error}">
-						<div class="card-panel red lighten-1">
-							<span class="white-text">${error}</span>
-						</div>
-					</c:if>
-					<c:if test="${not empty logoutMessage}">
-						<div class="card-panel green lighten-1">
-							<span class="white-text">${logoutMessage}</span>
-						</div>
-					</c:if>
-
+				<form id="loginForm" name="loginForm" action="login" method="POST">
+					
 					<div class="row">
 						<div class="input-field col s8 col-center">
 							<i class="material-icons prefix">&#xE853;</i> <input
@@ -332,9 +160,9 @@
 								href="#membresiaModal">¡Registrate!</a>
 						</div>
 					</div>
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}" />
-				</form:form>
+					<input type="hidden" name=""
+						value="" />
+				</form>
 			</div>
 		</div>
 		<div class="modal-footer grey lighten-3">
@@ -344,11 +172,199 @@
 		</div>
 	</div>
 
-		<div id="registroModal" class="modal modal-fixed-footer modal-scroll">
+	<div id="membresiaModal" class="modal modal-fixed-footer modal-scroll">
+		<div class="modal-content background-membresia">
+			<h4 id="paso1" class="grey-text text-darken-2 center">REGISTRO</h4>
+			<div class="divider"></div>
+			<div class="section ">
+				<form id="form1" method="POST" action="/comprar"></form>
+				<div class="container">
+					<div class="row">
+						<h4 class="center">Selecciona tu membresía.</h4>
+					</div>
+					<div class="row">
+						<div class="col s6"></div>
+						<div class="col s2 center">
+							<div class="cellContentModal" id="opt1M"
+								onclick="opt1M(); check1()">
+								<div class="selborder" id="gratisM">
+									Gratuito <input type="radio" name="membership" value="1"
+										id="v1">
+								</div>
+							</div>
+						</div>
+						<div class="col s2 center">
+							<div class="cellContentModal" id="opt2M"
+								onclick="opt2M(); check2()">
+								<div class="selborder" id="basicoM">
+									Básico <input type="radio" name="membership" value="2" id="v2">
+								</div>
+							</div>
+						</div>
+						<div class="col s2 center">
+							<div class="cellContentModal" id="opt3M"
+								onclick="opt3M(); check3()">
+								<div class="selborder" id="avanzadoM">
+									Avanzado <input type="radio" name="membership" value="3"
+										id="v3" checked>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<span><b>Suscripción</b></span>
+						</div>
+						<div class="col s2 center">
+							<b class="op1">$&nbsp;0</b>
+						</div>
+						<div class="col s2 center">
+							<b class="op2">$&nbsp;99</b>
+						</div>
+						<div class="col s2 center">
+							<b class="op3">$&nbsp;399</b>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6 ">Introducción al mercado de
+							Cryptodivisas</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Soportes y Resistencias</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Operación en Vivo de Cryptodivisas</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Introducción al análisis técnico</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE876;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Acceso a la red social de Trading</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<b class="op2">2 Semanas</b>
+						</div>
+						<div class="col s2 center">
+							<b class="op3">8 Semanas</b>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Análisis fundamental de las
+							Cryptodivisas</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Patrones psicológicos del mercado</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">Money Management en Cryptodivisas</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="divider"></div>
+						<div class="col s6">
+							Conceptualización de la <b>ICO</b> de una cryptodivisa
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op1">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op2">&#xE5CD;</i>
+						</div>
+						<div class="col s2 center">
+							<i class="material-icons op3">&#xE876;</i>
+						</div>
+					</div>
+				</div>
+				<div class="row center">
+					<a id="continuarPasoModal"
+						class="waves-effect waves-light btn blue darken-2">Continuar</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer grey lighten-3">
+			<p class="left white-text grey-text text-darken-2">
+				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
+			</p>
+		</div>
+	</div>
+
+	<div id="registroModal" class="modal modal-fixed-footer modal-scroll">
 		<div class="modal-content">
 			<div class="row">
 				<div class="col s1 left">
-					<a href="#"><i
+					<a href="#membresiaModal"><i
 						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
 				</div>
 				<div class="col s11">
@@ -436,15 +452,15 @@
 		</div>
 	</div>
 
-	<div id="pasarelaPago99" class="modal modal-fixed-footer modal-scroll">
+	<div id="pasarelaPago" class="modal modal-fixed-footer modal-scroll">
 		<div class="modal-content">
 			<div class="row">
 				<div class="col s1 left">
-					<a href="#"><i
+					<a href="#membresiaModal"><i
 						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
 				</div>
 				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">PASARELA DE PAGOS</h4>
+					<h4 class="grey-text text-darken-2 center">REGISTRO</h4>
 				</div>
 			</div>
 			<div class="divider"></div>
@@ -458,11 +474,15 @@
 				<div class="col s12 center">
 					<h1><sup>$</sup>99</h1>
 				</div>	
-				<div class="col s12 center">					
-					<a href="https://payco.link/35528"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-					<a href="https://payco.link/35528"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
+				<div class="col s12 center">
+					<a href="https://payco.link/35528"  target="_blank">Pagar ahora</a>
 				</div>
-			</div>			
+			</div>
+			<div class="row">
+				<div class="col s12 center">
+					<img id="qs-black" src="resources/img/QS-logo-black.jpg">
+				</div>
+			</div>
 		</div>
 		<div class="modal-footer grey lighten-3">
 			<p class="left white-text grey-text text-darken-2">
@@ -471,15 +491,15 @@
 		</div>
 	</div>
 	
-	<div id="pasarelaPago399" class="modal modal-fixed-footer modal-scroll">
+	<div id="pasarelaPago1" class="modal modal-fixed-footer modal-scroll">
 		<div class="modal-content">
 			<div class="row">
 				<div class="col s1 left">
-					<a href="#"><i
+					<a href="#membresiaModal"><i
 						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
 				</div>
 				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">PASARELA DE PAGOS</h4>
+					<h4 class="grey-text text-darken-2 center">REGISTRO</h4>
 				</div>
 			</div>
 			<div class="divider"></div>
@@ -493,48 +513,13 @@
 				<div class="col s12 center">
 					<h1><sup>$</sup>399</h1>
 				</div>	
-				<div class="col s12 center">					
-					<a href="https://payco.link/35529"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-					<a href="https://payco.link/35529"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
-				</div>
-			</div>			
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-	
-	<div id="pasarelaPagoCoaching" class="modal modal-fixed-footer modal-scroll">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s1 left">
-					<a href="#membresiaModal"><i
-						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
-				</div>
-				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">PASARELA DE PAGOS</h4>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="row">
-				<div class="col s12">
-					<p class="grey-text text-darken-2 center">Debes realizar el pago al siguiente link:</p>					
-				</div>
-				<div class="col s12">
-					
-				</div>
 				<div class="col s12 center">
-					<h1><sup>$</sup>99</h1>
-				</div>	
-				<div class="col s12 center">
-					<a href="https://payco.link/35529" target="_blank">COMPRAR AHORA</a>
+					<a href="https://payco.link/35529" target="_blank">Pagar ahora</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col s12 center">
-					<img id="qs-black" src="<c:url value='resources/img/QS-logo-black.jpg'/>">
+					<img id="qs-black" src="resources/img/QS-logo-black.jpg">
 				</div>
 			</div>
 		</div>
@@ -544,7 +529,6 @@
 			</p>
 		</div>
 	</div>
-	
 	<div id="registroModal2" class="modal modal-fixed-footer modal-scroll">
 		<div class="modal-content">
 			<div class="row">
@@ -670,7 +654,7 @@
 	</div>
 	<!-- Modals -->
 
-	<!--  Scripts-->	
+	<!--  Scripts-->
 	<script src="<c:url value='/resources/js/jquery-2.1.1.min.js'/>"></script>
 	<script src="<c:url value='/resources/js/materialize.js'/>"></script>
 	<script src="<c:url value='/resources/js/init.js'/>"></script>

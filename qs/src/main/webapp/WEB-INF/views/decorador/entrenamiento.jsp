@@ -23,12 +23,14 @@
 </head>
 <body>
 
-	<nav class="black" role="navigation">
+	<nav class="black nav-index" role="navigation">
 		<div class="nav-wrapper container">
 			<!--      <a id="logo-container" href="#" class="brand-logo"><img src="img/LogoQS2.png"></a>-->
+			<img id="qs-white-nav" class="left" src="<c:url value='/resources/img/Index/QS-Letras.png'/>">
+			
 			<ul class="right hide-on-med-and-down">
 				<li><a class="white-text" href="<c:url value='/'/>">Inicio</a></li>
-				<li><a class="white-text" href="#Membresias">Entrenamientos</a></li>
+				<li><a class="white-text" href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
 				<li><a class="white-text" href="<c:url value='/precios'/>" >Productos Virtuales</a></li>
 				<li><a class="white-text" href="<c:url value='/#contact_us'/>">Contáctanos</a></li>
 				<li><a class="white-text" href="#loginModal">Login</a></li>
@@ -36,7 +38,7 @@
 
 			<ul id="nav-mobile" class="side-nav">
 				<li><a href="<c:url value='/'/>">Inicio</a></li>
-				<li><a href="#Membresias">Entrenamientos</a></li>
+				<li><a href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
 				<li><a href="<c:url value='/precios'/>" >Productos Virtuales</a></li>
 				<li><a href="<c:url value='/#contact_us'/>">Contáctanos</a></li>
 				<li><a href="#loginModal">Login</a></li>
@@ -70,7 +72,7 @@
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
-		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional con las mismas estrategias que son utilizadas por nuestros traders para operar los fondos privados de la compañía. Al finalizar este entrenamiento el estudiante estará en capacidad de entender y operar el mercado de las cryptomonedas de manera profesional conociendo el manejo de las plataformas y el desarrollo de estrategias de inversión.</p>
+		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo dar a conocer nuestra academia y una primera visión del mundo de las cryptodivisas</p>
 		            </div>
 		          </div>
 		        </div>
@@ -89,13 +91,15 @@
 		            </div>
 		          </div>
 		        </div>
+		        <br>
+		        <br>
 		    </div>
 		    <div class="row" id="eBasico">
 		        <div class="col s5">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
-		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional con las mismas estrategias que son utilizadas por nuestros traders para operar los fondos privados de la compañía. Al finalizar este entrenamiento el estudiante estará en capacidad de entender y operar el mercado de las cryptomonedas de manera profesional conociendo el manejo de las plataformas y el desarrollo de estrategias de inversión.</p>
+		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional, adquiriendo los conocimientos básicos del trading en cryptodivisas</p>
 		            </div>
 		          </div>
 		        </div>

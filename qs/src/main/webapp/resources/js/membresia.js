@@ -118,7 +118,7 @@
     }
     
     function eGratuito(){
-    	$("#eGratuito").css({"display": "block"});
+    	$("#eGratuito").css({"display": "block"});    	
     	$("#eBasico").css({"display": "none"});
     	$("#eAvanzado").css({"display": "none"});
     	$("#btnGratuito").attr("style","background-color: #1976D2 !important");
