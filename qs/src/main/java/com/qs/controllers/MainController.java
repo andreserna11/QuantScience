@@ -46,6 +46,20 @@ public class MainController {
 		return model;
 	}
 	
+	@RequestMapping(value="/precios")
+	public ModelAndView precios(HttpServletRequest request){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("decorador/precios");
+		return model;
+	}
+	
+	@RequestMapping(value="/entrenamientos")
+	public ModelAndView entrenamientos(HttpServletRequest request){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("decorador/entrenamiento");
+		return model;
+	}
+	
 	@RequestMapping(value="/dashboard")
 	public ModelAndView dashboard(HttpServletRequest request){
 		ModelAndView model = new ModelAndView();

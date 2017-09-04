@@ -101,3 +101,45 @@
     function check3(){
     	$("#v").prop('checked', true);      
     }
+    
+    function coaching(){
+    	$("#Membresias-section").css({"display": "none"});
+    	$("#coaching-section").css({"display": "block"});
+    	$("#entrenamientos").attr("style","background-color: #e0e0e0 !important");
+    	$("#coaching").attr("style","background-color: #1976D2 !important");
+    	$("#coaching-section").css({"margin-bottom": "108px"});
+    }
+    
+    function entrenamiento(){
+    	$("#Membresias-section").css({"display": "block"});
+    	$("#coaching-section").css({"display": "none"});
+    	$("#coaching").attr("style","background-color: #e0e0e0 !important");
+    	$("#entrenamientos").attr("style","background-color: #1976D2 !important");
+    }
+    
+    function eGratuito(){
+    	$("#eGratuito").css({"display": "block"});
+    	$("#eBasico").css({"display": "none"});
+    	$("#eAvanzado").css({"display": "none"});
+    	$("#btnGratuito").attr("style","background-color: #1976D2 !important");
+    	$("#btnBasico").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnAvanzado").attr("style","background-color: #e0e0e0 !important");
+    }
+    
+    function eBasico(){
+    	$("#eGratuito").css({"display": "none"});
+    	$("#eBasico").css({"display": "block"});
+    	$("#eAvanzado").css({"display": "none"});
+    	$("#btnGratuito").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnBasico").attr("style","background-color: #1976D2 !important");
+    	$("#btnAvanzado").attr("style","background-color: #e0e0e0 !important");    	
+    }
+    
+    function eAvanzado(){
+    	$("#eGratuito").css({"display": "none"});
+    	$("#eBasico").css({"display": "none"});
+    	$("#eAvanzado").css({"display": "block"});
+    	$("#btnGratuito").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnBasico").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnAvanzado").attr("style","background-color: #1976D2 !important");     	
+    }

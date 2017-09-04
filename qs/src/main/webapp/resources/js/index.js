@@ -11,9 +11,22 @@ $('#btnActualizar').on('click', function() {
 });
 
 $('#continuarPaso1').on('click', function(){
-	var mem = $('#Membresias input[type="radio"]:checked').val();
-	if(mem == 1 || mem == 2 || mem == 3){
-		$('#registroModal').modal('open');	
+	$('#registroModal').modal('open');	
+});
+
+$('#continuarPasoPago').on('click', function(){
+	var memm = $('#Membresias-section input[type="radio"]:checked').val();
+	console.log(memm);
+	if(memm == 1){
+		$('#registroModal').modal('open');
+	}else{
+		if(memm == 2){
+			$('#pasarelaPago99').modal('open');
+		}else{
+			if(memm ==3){
+				$('#pasarelaPago399').modal('open');
+			}
+		}
 	}
 });
 
@@ -26,14 +39,16 @@ $('#continuarPasoModal').on('click', function(){
 });
 
 function registarUsuario() {
+	var membresia = $('#Membresias-section input[type="radio"]:checked').val() === undefined ? "1" : $('#Membresias-section input[type="radio"]:checked').val(); 
+	
 	var usuario = {
 		"nombre" : $('#nombreRegister').val(),
 		"apellidos" : $('#apellidoRegister').val(),
 		"telefono" : $('#telefonoRegister').val(),
 		"email" : $('#emailRegister').val(),
 		"clave" : $('#contrasenaRegister').val(),
-		"id_membresia": $('#Membresias input[type="radio"]:checked').val(),
-		"estado": $('#Membresias input[type="radio"]:checked').val() === "1" ? true : false
+		"id_membresia": membresia,
+		"estado": membresia === "1" ? true : false
 	}
 	
 	$.ajax({
@@ -43,15 +58,14 @@ function registarUsuario() {
 	       data:   JSON.stringify(usuario),
 	       success:  function (response) {
 		       	if(response){
-		       		var mem = $('#Membresias input[type="radio"]:checked').val();
-		       		if(mem === "1"){
+		       		if(membresia === "1"){
 		       			Materialize.toast('Te has registrado correctamente, ya puedes ingresar', 4000);
 		       		}
 		       		$('#registroModal').modal('close');
-		       		if(mem !== "1"){
+		       		if(membresia !== "1"){
 		       			Materialize.toast('Te has registrado correctamente, aproximadamente en 30 minutos se activará tu cuenta', 4000);
 		       			Materialize.toast('Después de verificar tu pago', 4000);
-		       			if(mem === "2"){
+		       			if(membresia === "2"){
 		       				$('#pasarelaPago').modal('open');
 		       			} else {
 		       				$('#pasarelaPago1').modal('open');

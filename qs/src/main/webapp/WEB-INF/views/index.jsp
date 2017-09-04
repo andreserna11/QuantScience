@@ -23,20 +23,22 @@
 </head>
 <body>
 
-	<nav class="white" role="navigation">
+	<nav class="black" role="navigation">
 		<div class="nav-wrapper container">
 			<!--      <a id="logo-container" href="#" class="brand-logo"><img src="img/LogoQS2.png"></a>-->
 			<ul class="right hide-on-med-and-down">
-				<li><a href="#Membresias">Entrenamiento</a></li>
-				<li><a href="#" tradingEnVivo>Trading en Vivo</a></li>
-				<li><a href="#contact_us">Contáctanos</a></li>
-				<li><a href="#loginModal">Login</a></li>
+				<li><a class="white-text" href="<c:url value='/'/>">Inicio</a></li>
+				<li><a class="white-text" href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
+				<li><a class="white-text" href="<c:url value='/precios'/>" >Productos Virtuales</a></li>
+				<li><a class="white-text" href="<c:url value='/#contact_us'/>">Contáctanos</a></li>
+				<li><a class="white-text" href="#loginModal">Login</a></li>
 			</ul>
 
 			<ul id="nav-mobile" class="side-nav">
-				<li><a href="#Membresias">Entrenamiento</a></li>
-				<li><a href="#tradingEnVivo">Trading en Vivo</a></li>
-				<li><a href="#contact_us">Contáctanos</a></li>
+				<li><a href="<c:url value='/'/>">Inicio</a></li>
+				<li><a href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
+				<li><a href="<c:url value='/precios'/>" >Productos Virtuales</a></li>
+				<li><a href="<c:url value='/#contact_us'/>">Contáctanos</a></li>
 				<li><a href="#loginModal">Login</a></li>
 			</ul>
 			<a href="#" data-activates="nav-mobile" class="button-collapse"><i
@@ -52,64 +54,290 @@
 					<br>
 					<br>
 					<div class="row center">
-						<h4 class="header col s12 light">
+						<h3 class="header col s12 light">
 							<b>Formando Especialistas en Inversiones</b>
-						</h4>
-						<h3 class="header col s12 light">¿Qué quieres aprender hoy?</h3>
-						<h6 class="header col s12 light">Inversiones - Análisis
-							Técnico - Análisis Fundamental - Acciones - Índices - Futuros</h6>
+						</h3>
+						<h4 class="header col s12 light"><b>¿Qué quieres aprender hoy?</b></h4>
+						<div class="row">
+							<div class="col s12">
+								<div class="row">
+									<div class="col s1"></div>
+									<div class="col s2">
+										<img id="imgIndex" src="<c:url value='/resources/img/Index/Index2.jpg'/>"/>
+										<p>INVERSIONES</p>
+									</div>
+									<div class="col s2">
+										<img id="imgIndex" src="<c:url value='/resources/img/Index/Index3.jpg'/>"/>
+										<p>ANÁLISIS TÉCNICO</p>
+									</div>
+									<div class="col s2">
+										<img id="imgIndex" src="<c:url value='/resources/img/Index/Index4.jpg'/>"/>
+										<p>ANÁLISIS FUNDAMENTAL</p>
+									</div>
+									<div class="col s2">
+										<img id="imgIndex" src="<c:url value='/resources/img/Index/Index5.jpg'/>"/>
+										<p>MERCADO FUTUROS</p>
+									</div>
+									<div class="col s2">
+										<img id="imgIndex" src="<c:url value='/resources/img/Index/Index6.jpg'/>"/>
+										<p>CRYPTOMENEDAS</p>
+									</div>
+									<div class="col s1"></div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row center">
-						<h4 class="header col s12 light">Empieza tu vida en el
-							Mercado Bursátil</h4>
-						<h2 class="header col s12 light">"ENTRENAMIENTO DE INVERSIÓN
-							EN CRYPTOMONEDAS"</h2>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<div class="row">
+							<div class="col s4 cajon">
+								<h5 class="white-text">MEJORA TU CALIDAD & ESTILO DE VIDA</h5>
+								<p>Convierte el Trading en una Profesión</p>
+							</div>
+							<div class="col s4 cajon">
+							<br>
+								<h5 class="white-text">TÚ PUEDES SER TRADER</h5><br>								
+								<p id="margin-top-cuadro">No importa tu nivel de experiencia</p>
+							</div>
+							<div class="col s4 cajon">
+								<h5 class="white-text">SE PARTE DE NUESTRA COMUNIDAD</h5><br>
+								<p id="margin-top-cuadro">Potencializa tu conocimiento</p>
+							</div>
+						</div>
 					</div>
-					<div class="row center">
-						<a href="#Membresias" id="download-button"
-							class="waves-effect waves-light btn blue darken-2">Entrenamiento
-							<b>GRATIS</b>
-						</a>
-					</div>
-					<br>
-					<br>
-
 				</div>
 			</div>
 			<div class="parallax">
-				<img src="<c:url value='/resources/img/landing-1.jpg'/>"
-					alt="Unsplashed background img 1">
+				<img src="<c:url value='/resources/img/Index/Index1.jpg'/>">
 			</div>
 		</div>
 	</section>
-	<!-- 
+	
 	<section>
+		<div id="index-banner" class="parallax-container background-landing valign-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center">
+						<h4><b>NUESTROS ENTRENAMIENTOS EN LINEA</b></h4>
+					</div>			
+				</div>
+				<div class="row">
+					<div class="col s4">
+					  <div class="card">
+					    <div class="card-image waves-effect waves-block waves-light">
+					      <img class="activator" src="<c:url value='/resources/img/Index/Index8.jpg'/>">
+					    </div>
+					    <div class="card-content">
+				      		<span id="pading-cards" class="card-title  grey-text text-darken-4">Introdcción al mercado de las Crytomonedas</span>
+				      		<p><a href="#">Ver Entrenamiento <b>GRATUITO</b></a></p>
+					      	<div>
+					    		<img id="img-calidad" class="center" src="<c:url value='/resources/img/Index/Index11.png'/>">
+					    	</div>
+					    </div>					    
+					  </div>
+					</div>
+					<div class="col s4">
+						<div class="card">
+						    <div class="card-image waves-effect waves-block waves-light">
+						      <img class="activator" src="<c:url value='/resources/img/Index/Index9.jpg'/>">
+						    </div>
+						    <div class="card-content">
+						      	<span id="pading-cards" class="card-title  grey-text text-darken-4">Metología del mercado de Futuros</span>
+				      			<p><a href="#">Ver Entrenamiento</a></p>
+						    	<div>
+							    	<img id="img-calidad" class="center" src="<c:url value='/resources/img/Index/Index11.png'/>">
+							    </div>
+						    </div>						    					   
+						</div>
+					</div>
+					<div class="col s4">
+						<div class="card">
+						    <div class="card-image waves-effect waves-block waves-light">
+						      <img class="activator" src="<c:url value='/resources/img/Index/Index10.jpg'/>">
+						    </div>
+						    <div class="card-content">
+							    <span class="card-title  grey-text text-darken-4">Básica y Avanzado del Mercado  de Cryptomonedas</span>
+							    <p><a href="#">Ver Entrenamiento</a></p><br>
+							    <div>
+							    	<img id="img-calidad" class="center" src="<c:url value='/resources/img/Index/Index11.png'/>">
+							    </div>
+						    </div>					    
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<a href="<c:url value='/precios'/>"
+					class="right waves-effect waves-light btn white black-text">Productos Virtuales</a>
+				</div>
+			</div>
+			<div class="parallax">
+				<img src="<c:url value='/resources/img/Index/Index7.jpg'/>">
+			</div>
+		</div>
+	</section>
+	
+	<section>		
+			<div class="section">
+				<div class="row">
+					<div class="col s12 center grey lighten-4">
+						<h4><b>TESTIMONIOS</b></h4>
+						<div class="divider"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s5">
+						<div class="row">
+							<div class="col s12 center">
+								<img id="qs-black" src="<c:url value='/resources/img/Index/Qs-logo-black.png'/>">
+								<h6>COMMODITY TRADING ADVISOR </h6><span><b>MIEMBROS DE</b></span><br>
+								<h6>NATIONAL FUTURES ASSOCIATION </h6>
+								<h6>LICIENCIA SERIES 3</h6>
+								<iframe width="430" height="315" src="https://www.youtube.com/embed/_nzhTA0Sm34" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="col s7 background-testimonio">
+						<div class="row padding-testimonio">
+							<div class="col s12">
+								<div class="row">
+									<div class="col s2">
+										<img src="<c:url value='/resources/img/Index/AlejandroSaenz.jpg'/>" class="circle img-120">	
+									</div>
+									<div class="col s10">
+										<q>Es impresionante, en mi concepto, como un curso que a primera vista parece tan corto puede cambiarte de manera tan drástica tu vida. Un curso interesante, enfocado a lo que en última instancia realmente importa que es la práctica, la cual es orientada por excelentes profesionales que te guían paso a paso en ese camino que de antemano te has propuesto, ser un gran inversor. Profesionales que además te apoyan de manera atenta en todos tus proyectos siempre con miras hacia tu desarrollo profesional y lo mas importante, personal. No tengo mas que decir gracias, simplemente gracias.</q>
+										<br>
+										<span><b>Alejandro Saenz</b></span>
+									</div>
+								</div>														
+							</div>
+						</div>
+						<div class="divider"></div>
+						<br>										
+						<div class="row">
+							<div class="col s12">
+								<div class="row">
+									<div class="col s10">
+										<q>Me parece que la experiencia adquirida en el entrenamiento fue excelente, debido a que este no solo te muestra y enseña como es el mercado bursátil, sino que te orienta y da los conocimientos necesarios para poder pasar como dice Robert Kiyosaki al cuadrante del inversionista, y algo que es idóneo destacar es que te instruye a través de la practica en el mercado, lo que le permite a la persona cometer errores, corregirlos y buscar la mejor manera de operar en este. Lo que hacen es excelente porque es la mejor manera de aprender, y según el triangulo del aprendizaje así se aprende de verdad en la vida.</q>
+										<br>
+										<span><b>Andres Soto</b></span>
+									</div>
+									<div class="col s2">
+										<img src="<c:url value='/resources/img/Index/AndresSoto.jpg'/>" class="circle img-120">	
+									</div>
+								</div>									
+							</div>
+						</div>																		
+					</div>
+				</div>
+				<div class="row">
+					<a href="https://www.youtube.com/channel/UCcTIRU3hr20AMKvsTOMn17g"  target="_blank" id="" class="left waves-effect waves-light btn blue darken-2 white-text">Ver más videos</a>
+				</div>																						
+			</div>
+			<hr>
+	</section>
+	
+	<section id="contact_us">
 		<div class="container">
 			<div class="section">
 				<div class="row">
 					<div class="col s12 center">
-						<h4>TESTIMONIOS</h4>
-						<div class="divider"></div>
-					</div>
-					<div class="col s12 center">
-						<br>
-						<iframe width="700" height="400"
-							src="https://www.youtube.com/embed/_nzhTA0Sm34" frameborder="0"
-							allowfullscreen></iframe>
-					</div>
-					<div class="col s12">
-						<p>En este video les mostramos a ustedes nuestros traders el
-							testimonio de Richard, uno de nuestros traders de la ciudad de
-							Cali que ya operan en vivo obteniendo excelentes resultados y
-							consistencias gracias al acompañamiento y entrenamiento de
-							Quantsciense Tecnologies.</p>
+						<h3>
+							<i class="mdi-content-send brown-text"></i>
+						</h3>
+						<h4>
+							<b>Contáctanos</b>
+						</h4>
+						<div class="row">
+							<div class="col s6">
+								<br>
+								<div class="row contactLeft">
+									<h4>QuantsCience</h4>
+								</div>
+								<div class="row contactLeft">
+									<h5>quantsciencesas@gmail.com</h5>
+								</div>
+								<div class="row contactLeft">
+									<h5>Horario de Negociación (New York Time)</h5>
+								</div>
+								<div class="row contactLeft">
+									<h5>
+										Lunes a Viernes: <b>8 a.m. - 4 p.m.</b>
+									</h5>
+								</div>
+							</div>
+							<div class="col s6 contactBackground">
+								<div class="row">
+									<h5>Déjanos un mensaje</h5>
+								</div>
+								<div class="row">
+									<div class="col s12">
+										<div class="row">
+											<div class="input-field col s6">
+												<i class="material-icons prefix">account_circle</i> <input
+													id="nombreContact" type="text" class="validate"> <label
+													for="nombreContact">Nombre</label>
+											</div>
+											<div class="input-field col s6">
+												<i class="material-icons prefix">phone</i> <input
+													id="telefonoContact" type="tel" class="validate"> <label
+													for="telefonoContact">Teléfono</label>
+											</div>
+											<div class="input-field col s12">
+												<i class="material-icons prefix">email</i> <input
+													id="emailContact" type="email" class="validate"> <label
+													for="emailContact" data-error="Error">Email</label>
+											</div>
+											<div class="input-field col s12">
+												<i class="material-icons prefix">message</i>
+												<textarea id="mensajeContact" class="materialize-textarea"
+													data-length="120"></textarea>
+												<label for="mensajeContact">Mensaje</label>
+											</div>
+										</div>
+										<div class="row">
+											<button id="btnContact"
+												class="btn waves-effect waves-light blue darken-2">
+												Enviar <i class="material-icons right">send</i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>		
+	</section>
+	
+<footer class="page-footer blue darken-2">
+		<div class="footer-copyright">
+			<div id="qs-footer" class="row">
+				<div class="col s12">
+					<img id="qs-white" class="left" src="<c:url value='/resources/img/Index/QS-logo-white.png'/>">
+				</div>					
+			</div>
+			<div class="row">
+				<div class="col s3 center">
+					<a class="white-text" href="https://entrenamientobursatil.ning.com/main/authorization/signIn?target=https%3A%2F%2Fentrenamientobursatil.ning.com%2F" target="_blank">Red Social Privada</a>
+				</div>
+				<div class="col s3 center">
+					<a class="white-text" href="<c:url value='/precios'/>">Precios</a>
+				</div>
+				<div class="col s3 center">
+					<a class="white-text" href="https://www.youtube.com/channel/UCcTIRU3hr20AMKvsTOMn17g" target="_blank">Trading en Vivo</a>
+				</div>
+				<div class="col s3">
+					<a class="white-text" href="https://www.facebook.com/QuantScience/" target="_blank"><img id="p35" src="<c:url value='/resources/img/Precios/facebook-icon.png'/>"></a>
+					<a class="white-text" href="https://www.instagram.com/quantsciencetechnologies/" target="_blank"><img id="p35" src="<c:url value='/resources/img/Precios/Instagram-icon.png'/>"></a>
+					<a class="white-text" href="https://www.youtube.com/channel/UCcTIRU3hr20AMKvsTOMn17g" target="_blank"><img id="p35" src="<c:url value='/resources/img/Precios/youtube-icon.png'/>"></a>
+				</div>
+			</div>							
 		</div>
-	</section> -->
-
-	<section id="Membresias" class="background-membresia">
+	</footer>
+	
+	<!-- <section id="Membresias" class="background-membresia">
 		<form id="form1" method="POST" action="/comprar"></form>
 		<div class="container">
 			<div class="row">
@@ -281,111 +509,10 @@
 				class="waves-effect waves-light btn blue darken-2">Continuar</a>
 		</div>
 		<br>
-	</section>
+	</section>-->
 
 	<section id="tradingEnVivo">
 	</section>
-
-	<section id="contact_us">
-		<div class="container">
-			<div class="section">
-				<div class="row">
-					<div class="col s12 center">
-						<h3>
-							<i class="mdi-content-send brown-text"></i>
-						</h3>
-						<h4>
-							<b>Contáctanos</b>
-						</h4>
-						<div class="row">
-							<div class="col s6">
-								<br>
-								<div class="row contactLeft">
-									<h4>QuantsCience</h4>
-								</div>
-								<div class="row contactLeft">
-									<h5>quantsciencesas@gmail.com</h5>
-								</div>
-								<div class="row contactLeft">
-									<h5>Horario de Negociación (New York Time)</h5>
-								</div>
-								<div class="row contactLeft">
-									<h5>
-										Lunes a Viernes: <b>8 a.m. - 4 p.m.</b>
-									</h5>
-								</div>
-							</div>
-							<div class="col s6 contactBackground">
-								<div class="row">
-									<h5>Déjanos un mensaje</h5>
-								</div>
-								<div class="row">
-									<div class="col s12">
-										<div class="row">
-											<div class="input-field col s6">
-												<i class="material-icons prefix">account_circle</i> <input
-													id="nombreContact" type="text" class="validate"> <label
-													for="nombreContact">Nombre</label>
-											</div>
-											<div class="input-field col s6">
-												<i class="material-icons prefix">phone</i> <input
-													id="telefonoContact" type="tel" class="validate"> <label
-													for="telefonoContact">Teléfono</label>
-											</div>
-											<div class="input-field col s12">
-												<i class="material-icons prefix">email</i> <input
-													id="emailContact" type="email" class="validate"> <label
-													for="emailContact" data-error="Error">Email</label>
-											</div>
-											<div class="input-field col s12">
-												<i class="material-icons prefix">message</i>
-												<textarea id="mensajeContact" class="materialize-textarea"
-													data-length="120"></textarea>
-												<label for="mensajeContact">Mensaje</label>
-											</div>
-										</div>
-										<div class="row">
-											<button id="btnContact"
-												class="btn waves-effect waves-light blue darken-2">
-												Enviar <i class="material-icons right">send</i>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer class="page-footer teal">
-		<div class="container">
-			<div class="row">
-				<div class="col  s12">
-					<h5 class="white-text">Nuestro equipo</h5>
-					<p class="grey-text text-lighten-4">Somos un equipo de traders
-						programadores, enfocados en desarrollar estrategias de trading
-						para inversiones en todos los mercados financieros, somos un
-						equipo compuesto por matemáticos, ingenieros electrónicos,
-						ingenieros financieros e ingenieros en ciencias de la computación,
-						quienes combinando las mejores ideas crean las más potentes y
-						avanzadas estrategias de inversión para los mercados financieros.
-						Algunas de nuestras mejores estrategias están basadas en modelos
-						matemáticos, estadísticos, financieros, físicos, económicos,
-						geométricos, trigonométricos, entre otros.</p>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				<p class="left white-text white-text text-darken-2">
-					QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-				
-			</div>
-		</div>
-	</footer>
 
 	<!-- Modals -->
 	<div id="loginModal" class="modal modal-fixed-footer">
@@ -933,7 +1060,7 @@
 	<!-- Modals -->
 
 	<!--  Scripts-->
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="<c:url value='/resources/js/jquery-2.1.1.min.js'/>"></script>
 	<script src="<c:url value='/resources/js/materialize.js'/>"></script>
 	<script src="<c:url value='/resources/js/init.js'/>"></script>
 	<script src="<c:url value='/resources/js/membresia.js'/>"></script>
