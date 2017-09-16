@@ -50,6 +50,11 @@ function registarUsuario() {
 		"id_membresia": membresia,
 		"estado": membresia === "1" ? true : false
 	}
+	if($('#nombreRegister').val() == "a"){
+		document.getElementById("nombreRegister").className="ErrorSolonum";
+		return false;
+	}
+	
 	
 	$.ajax({
 	       url:	'register',

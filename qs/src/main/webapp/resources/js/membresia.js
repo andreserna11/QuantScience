@@ -99,15 +99,14 @@
     	$("#v2").prop('checked', true);
     }
     function check3(){
-    	$("#v").prop('checked', true);      
+    	$("#v3").prop('checked', true);      
     }
     
     function coaching(){
     	$("#Membresias-section").css({"display": "none"});
     	$("#coaching-section").css({"display": "block"});
     	$("#entrenamientos").attr("style","background-color: #e0e0e0 !important");
-    	$("#coaching").attr("style","background-color: #1976D2 !important");
-    	$("#coaching-section").css({"margin-bottom": "108px"});
+    	$("#coaching").attr("style","background-color: #1976D2 !important");    	
     }
     
     function entrenamiento(){
@@ -142,4 +141,20 @@
     	$("#btnGratuito").attr("style","background-color: #e0e0e0 !important");
     	$("#btnBasico").attr("style","background-color: #e0e0e0 !important");
     	$("#btnAvanzado").attr("style","background-color: #1976D2 !important");     	
+    }
+    
+    function aceptarterms1(){     		
+    	if($('#acceptTerms:checked').val()==1){
+    		$('#continuarPasoPago').attr('disabled', false);
+    	}else{
+    		$('#continuarPasoPago').attr('disabled', true);
+    	}
+    }
+    
+    function aceptarterms2(){     		
+    	if($('#acceptTerms2:checked').val()==1){    		
+    		$('#continuarPasoPagoCoaching').attr('disabled', false);
+    	}else{
+    		$('#continuarPasoPagoCoaching').attr('disabled', true);
+    	}
     }

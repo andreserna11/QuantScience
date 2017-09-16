@@ -5,6 +5,78 @@
  *
  * Made By MaterializeCSS.com
  */
+ 
+#nav-index-li a:hover{
+	background-color: #555;		
+}
+
+#terminos1{
+	color: rgb(99, 99, 102);
+	text-align: right;
+}
+
+#terminos2{
+	color: rgb(99, 99, 102)!important ;
+	text-align: left;
+}
+
+.nav1{
+	margin-left: 25px;
+	margin-right: 20px;	
+}
+.nav2{
+	margin-left: 25px;
+	margin-right: 20px;	
+}
+.nav3{
+	margin-left: 25px;
+	margin-right: 20px;	
+}
+.nav4{
+	margin-left: 25px;
+	margin-right: 20px;	
+}
+
+/*Contacto*/
+#contact_us{
+	background-color: rgb(230, 233, 239);
+}
+
+/**/
+
+.footer-qs-color{
+	background-color: rgb(2, 0, 32);
+}
+
+#footer-text{
+	padding-top: 40px;
+}
+
+#footer-text:hover{
+	text-decoration: underline;
+}
+#footer-icon{
+	padding-top: 20px;
+}
+
+#hLogin:hover{
+	background-color: #555;	
+}
+
+.nav-index-login-p{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border: 1px solid white;
+	border-radius: 20px;	
+}
+
+#nav-index-login{
+	border: 1px solid white;
+	border-radius: 20px;
+}
+
 .nav-index{
 	height: 86px;
 }
@@ -35,16 +107,22 @@
 	width: 27px;
 }
 
+/*COACHING*/
 #coaching-section{
 	display: none;
+	background-color: rgb(230, 233, 239); 
 }
-
+/**/
 #p100{
 	width: 100px;
 }
 
 #qs-black{
 	width: 126px;
+}
+
+#testimonioQs{
+	font-style: italic;
 }
 
 #qs-white{

@@ -16,6 +16,8 @@
 	type="text/css" rel="stylesheet" media="screen,projection" />
 <link href="<c:url value='resources/css/style.css'/>" type="text/css"
 	rel="stylesheet" media="screen,projection" />
+<link href="<c:url value='resources/css/social.css'/>" type="text/css"
+	rel="stylesheet" media="screen,projection" />
 <link href="<c:url value='resources/css/validaciones/validation.css'/>"
 	type="text/css" rel="stylesheet" media="screen,projection" />
 <link rel="shortcut icon"
@@ -23,30 +25,7 @@
 </head>
 <body>
 
-	<nav class="black nav-index" role="navigation">
-		<div class="nav-wrapper container">
-			<!--      <a id="logo-container" href="#" class="brand-logo"><img src="img/LogoQS2.png"></a>-->
-			<img id="qs-white-nav" class="left" src="<c:url value='/resources/img/Index/QS-Letras.png'/>">
-			
-			<ul class="right hide-on-med-and-down">
-				<li><a class="white-text" href="<c:url value='/'/>">Inicio</a></li>
-				<li><a class="white-text" href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
-				<li><a class="white-text" href="<c:url value='/precios'/>" >Productos Virtuales</a></li>
-				<li><a class="white-text" href="<c:url value='/#contact_us'/>">Contáctanos</a></li>
-				<li><a class="white-text" href="#loginModal">Login</a></li>
-			</ul>
-
-			<ul id="nav-mobile" class="side-nav">
-				<li><a href="<c:url value='/'/>">Inicio</a></li>
-				<li><a href="<c:url value='/entrenamientos'/>">Entrenamientos</a></li>
-				<li><a href="<c:url value='/precios'/>" >Productos Virtuales</a></li>
-				<li><a href="<c:url value='/#contact_us'/>">Contáctanos</a></li>
-				<li><a href="#loginModal">Login</a></li>
-			</ul>
-			<a href="#" data-activates="nav-mobile" class="button-collapse"><i
-				class="material-icons">menu</i></a>
-		</div>
-	</nav>
+<jsp:include page="../template/navBar.jsp" />
 	
 	<section>		
 		<div class="row">
@@ -71,7 +50,7 @@
 					<div class="cellContent" id="opt1" onclick="opt1(); check1()">
 						<div class="selborder" id="gratis">
 							Gratuito <input type="radio" name="membership" value="1" id="v1"
-								form="form1" checked>
+								form="form1" checked >
 						</div>
 					</div>
 				</div>
@@ -228,7 +207,13 @@
 		</div>
 		<div class="row center">
 			<a id="continuarPasoPago"
-				class="waves-effect waves-light btn blue darken-2">Continuar</a>
+				class="waves-effect waves-light btn blue darken-2" disabled>Continuar</a>
+			<div class="row">
+				<div class="col s12">							
+					<input type="checkbox" id="acceptTerms" name="acceptTerms" value="1" onclick="aceptarterms1();"/>Acepto los <ins>términos y condiciones</ins>
+					<!-- Se realizo modificacion en el materialize para poder mostrar el checkbox -->							
+				</div>
+			</div>
 		</div>
 		<br>
 	</section>
@@ -247,428 +232,23 @@
 				<div class="col s6"></div>
 				<div class="col s6">
 					<div class="center">
-						<a href="#pasarelaPagoCoaching" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-						<a href="#pasarelaPagoCoaching"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a> 
+						<a id="continuarPasoPagoCoaching" href="#pasarelaPagoCoaching" class="waves-effect waves-light btn blue darken-2" disabled>COMPRAR AHORA</a><br><br>
+						<a><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>" ></a>
+						<div class="row">
+							<div class="col s12">							
+								<input type="checkbox" id="acceptTerms2" name="acceptTerms2" value="1" onclick="aceptarterms2();"/>Acepto los <ins>términos y condiciones</ins>
+								<!-- Se realizo modificacion en el materialize para poder mostrar el checkbox -->							
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>	
 		
-	<footer class="page-footer blue darken-2">
-		<div class="footer-copyright">
-			<div id="qs-footer" class="row">
-				<div class="col s12">
-					<img id="qs-white" class="left" src="<c:url value='/resources/img/Index/QS-logo-white.png'/>">
-				</div>					
-			</div>
-			<div class="row">
-				<div class="col s3 center">
-					<a class="white-text" href="https://entrenamientobursatil.ning.com/main/authorization/signIn?target=https%3A%2F%2Fentrenamientobursatil.ning.com%2F" target="_blank">Red Social Privada</a>
-				</div>
-				<div class="col s3 center">
-					<a class="white-text" href="<c:url value='/precios'/>">Precios</a>
-				</div>
-				<div class="col s3 center">
-					<a class="white-text" href="https://www.youtube.com/channel/UCcTIRU3hr20AMKvsTOMn17g" target="_blank">Trading en Vivo</a>
-				</div>
-				<div class="col s3">
-					<a class="white-text" href="https://www.facebook.com/QuantScience/" target="_blank"><img id="p35" src="<c:url value='/resources/img/Precios/facebook-icon.png'/>"></a>
-					<a class="white-text" href="https://www.instagram.com/quantsciencetechnologies/" target="_blank"><img id="p35" src="<c:url value='/resources/img/Precios/Instagram-icon.png'/>"></a>
-					<a class="white-text" href="https://www.youtube.com/channel/UCcTIRU3hr20AMKvsTOMn17g" target="_blank"><img id="p35" src="<c:url value='/resources/img/Precios/youtube-icon.png'/>"></a>
-				</div>
-			</div>							
-		</div>
-	</footer>
+	<jsp:include page="../template/footer.jsp" />
 	
-	<!-- Modals -->
-	<div id="loginModal" class="modal modal-fixed-footer">
-		<div class="modal-content">
-			<h4 class="grey-text text-darken-2 center">¡Conéctate!</h4>
-			<div class="divider"></div>
-			<div class="col s12 valign">
-				<form:form id="loginForm" name="loginForm" action="login"
-					method="POST">
-					<c:if test="${not empty error}">
-						<div class="card-panel red lighten-1">
-							<span class="white-text">${error}</span>
-						</div>
-					</c:if>
-					<c:if test="${not empty logoutMessage}">
-						<div class="card-panel green lighten-1">
-							<span class="white-text">${logoutMessage}</span>
-						</div>
-					</c:if>
-
-					<div class="row">
-						<div class="input-field col s8 col-center">
-							<i class="material-icons prefix">&#xE853;</i> <input
-								class="validate barra" type="text" id="correo" name="correo">
-							<label for="correo">Correo electrónico </label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-field col s8 col-center">
-							<i class="material-icons prefix">&#xE0DA;</i> <input
-								class="validate" type="password" name="password" id="password">
-							<label for="password">Contraseña</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-field center col s12">
-							<button class="waves-effect waves-light btn blue darken-2">Iniciar
-								Sesión</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="center col s6">
-							<a id="recuperar-password" href="#olvidarModal"
-								class="blue-text text-darken-3 modal-action modal-close modal-trigger">¿Olvidaste
-								tu contraseña?</a>
-						</div>
-						<div class="center col s6">
-							<a id="registrate"
-								class="blue-text text-darken-3 modal-action modal-close modal-trigger"
-								href="#membresiaModal">¡Registrate!</a>
-						</div>
-					</div>
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}" />
-				</form:form>
-			</div>
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-
-		<div id="registroModal" class="modal modal-fixed-footer modal-scroll">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s1 left">
-					<a href="#"><i
-						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
-				</div>
-				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">REGISTRO</h4>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="row">
-				<div class="col s12">
-					<p class="grey-text text-darken-2 center">Por favor ingresa tus
-						datos, para completar el registro</p>
-				</div>
-			</div>
-			<div class="section">
-				<div class="row">
-					<div class="col s12 center">
-						<div class="row">
-							<div class="input-field col s6">
-								<i class="material-icons prefix">account_circle</i> <input
-									id="nombreRegister" type="text" class="validate"
-									title="Este campo es obligatorio" required> <label
-									for="nombreRegister">Nombre</label>
-								<div id="errorNombre" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">account_circle</i> <input
-									id="apellidoRegister" type="text" class="validate"> <label
-									for="apellidoRegister">Apellidos</label>
-								<div id="errorApellido" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">phone</i> <input
-									id="telefonoRegister" type="text" class="validate" required>
-								<label for="telefonoRegister">Teléfono</label>
-								<div id="errorTelefono" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">email</i> <input
-									id="emailRegister" type="email" class="validate" required>
-								<label for="emailRegister" data-error="Error">Email</label>
-								<div id="errorEmail" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">&#xE0DA;</i> <input
-									id="contrasenaRegister" type="password" class="validate"
-									required> <label for="contrasenaRegister">Contraseña</label>
-								<div id="errorClave" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">&#xE0DA;</i> <input
-									id="contrasena2Register" type="password" class="validate"
-									required> <label for="contrasena2Register">Repetir
-									contraseña</label>
-							</div>
-						</div>
-						<div class="row">
-							<button id="btnRegistrar"
-								class="btn waves-effect waves-light blue darken-2">
-								Registrarse <i class="material-icons right">send</i>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-
-	<div id="pasarelaPago99" class="modal modal-fixed-footer modal-scroll">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s1 left">
-					<a href="#"><i
-						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
-				</div>
-				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">PASARELA DE PAGOS</h4>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="row">
-				<div class="col s12">
-					<p class="grey-text text-darken-2 center">Para completar tu registro, debes realizar el pago al siguiente link:</p>					
-				</div>
-				<div class="col s12">
-					
-				</div>
-				<div class="col s12 center">
-					<h1><sup>$</sup>99</h1>
-				</div>	
-				<div class="col s12 center">					
-					<a href="https://payco.link/35528"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-					<a href="https://payco.link/35528"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
-				</div>
-			</div>			
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-	
-	<div id="pasarelaPago399" class="modal modal-fixed-footer modal-scroll">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s1 left">
-					<a href="#"><i
-						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
-				</div>
-				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">PASARELA DE PAGOS</h4>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="row">
-				<div class="col s12">
-					<p class="grey-text text-darken-2 center">Para completar tu registro, debes realizar el pago al siguiente link:</p>					
-				</div>
-				<div class="col s12">
-					
-				</div>
-				<div class="col s12 center">
-					<h1><sup>$</sup>399</h1>
-				</div>	
-				<div class="col s12 center">					
-					<a href="https://payco.link/35529"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-					<a href="https://payco.link/35529"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
-				</div>
-			</div>			
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-	
-	<div id="pasarelaPagoCoaching" class="modal modal-fixed-footer modal-scroll">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s1 left">
-					<a href="#membresiaModal"><i
-						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
-				</div>
-				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">PASARELA DE PAGOS</h4>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="row">
-				<div class="col s12">
-					<p class="grey-text text-darken-2 center">Debes realizar el pago al siguiente link:</p>					
-				</div>
-				<div class="col s12">
-					
-				</div>
-				<div class="col s12 center">
-					<h1><sup>$</sup>99</h1>
-				</div>	
-				<div class="col s12 center">
-					<a href="https://payco.link/35529" target="_blank">COMPRAR AHORA</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 center">
-					<img id="qs-black" src="<c:url value='resources/img/QS-logo-black.jpg'/>">
-				</div>
-			</div>
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-	
-	<div id="registroModal2" class="modal modal-fixed-footer modal-scroll">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s1 left">
-					<a href="#membresiaModal"><i
-						class="grey-text text-darken-2 material-icons back-icon modal-action modal-close modal-trigger">&#xE314;</i></a>
-				</div>
-				<div class="col s11">
-					<h4 class="grey-text text-darken-2 center">
-						PASO <b>2</b> DE 3
-					</h4>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="section">
-				<div class="row">
-					<div class="col s12 center">
-						<div class="row">
-							<div class="input-field col s6">
-								<i class="material-icons prefix">account_circle</i> <input
-									id="nombreRegister" type="text" class="validate"
-									title="Este campo es obligatorio" required> <label
-									for="nombreRegister">Nombre</label>
-								<div id="errorNombre" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">account_circle</i> <input
-									id="apellidoRegister" type="text" class="validate"> <label
-									for="apellidoRegister">Apellidos</label>
-								<div id="errorApellido" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">phone</i> <input
-									id="telefonoRegister" type="text" class="validate" required>
-								<label for="telefonoRegister">Teléfono</label>
-								<div id="errorTelefono" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">email</i> <input
-									id="emailRegister" type="email" class="validate" required>
-								<label for="emailRegister" data-error="Error">Email</label>
-								<div id="errorEmail" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">&#xE0DA;</i> <input
-									id="contrasenaRegister" type="password" class="validate"
-									required> <label for="contrasenaRegister">Contraseña</label>
-								<div id="errorClave" class="errores">
-									<span class="red-text text-darken-2">Este campo es
-										obligatorio</span>
-								</div>
-							</div>
-							<div class="input-field col s6">
-								<i class="material-icons prefix">&#xE0DA;</i> <input
-									id="contrasena2Register" type="password" class="validate"
-									required> <label for="contrasena2Register">Repetir
-									contraseña</label>
-							</div>
-						</div>
-						<div class="row">
-							<button class="btn waves-effect waves-light blue darken-2"
-								href="#pasarelaPago">
-								Continuar <i class="material-icons right">send</i>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-		</div>
-	</div>
-
-	<div id="olvidarModal" class="modal modal-fixed-footer modalOlvidar">
-		<div class="modal-content">
-			<h4 class="grey-text text-darken-2 center">¿Olvidaste tu
-				contrseña?</h4>
-			<div class="divider"></div>
-			<div class="section">
-				<div class="row">
-					<div class="col s12 center">
-						<form>
-							<div class="row">
-								<div class="col s12">
-									<span><b>Por favor ingresa tu cuenta de correo
-											electronico</b></span>
-								</div>
-								<div class="input-field col s12">
-									<i class="material-icons prefix">email</i> <input
-										id="emailContact" type="email" class="validate"> <label
-										for="emailContact" data-error="Error">Email</label>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal-footer grey lighten-3">
-			<p class="left white-text grey-text text-darken-2">
-				QuantsCience S.A.S. <i class="tiny material-icons">&#xE90C;</i>2017
-			</p>
-			<button class="rigth btn waves-effect waves-light blue darken-2"
-				type="submit" name="action">
-				Recuperar <i class="material-icons right">send</i>
-			</button>
-		</div>
-	</div>
-	<!-- Modals -->
+	<jsp:include page="../template/modal.jsp" />
 
 	<!--  Scripts-->	
 	<script src="<c:url value='/resources/js/jquery-2.1.1.min.js'/>"></script>
