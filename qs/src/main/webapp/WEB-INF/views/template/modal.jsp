@@ -181,14 +181,8 @@
 					<h1><sup>$</sup>99</h1>
 				</div>	
 				<div class="col s12 center">					
-					<a href="https://payco.link/35528"  target="_blank" class="waves-effect waves-light btn blue darken-2" disabled>COMPRAR AHORA</a><br><br>
+					<a href="https://payco.link/35528"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
 					<a href="https://payco.link/35528"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
-					<div class="row">
-							<div class="col s12">							
-								<input type="checkbox" id="acceptTerms" name="acceptTerms" value="1" required/>Acepto los <ins>términos y condiciones</ins>
-								<!-- Se realizo modificacion en el materialize para poder mostrar el checkbox -->							
-							</div>
-						</div>
 				</div>
 			</div>			
 		</div>
@@ -222,7 +216,7 @@
 					<h1><sup>$</sup>399</h1>
 				</div>	
 				<div class="col s12 center">					
-					<a href="https://payco.link/35529"  target="_blank" class="waves-effect waves-light btn blue darken-2" disabled>COMPRAR AHORA</a><br><br>
+					<a href="https://payco.link/35529"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
 					<a href="https://payco.link/35529"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
 				</div>
 			</div>			

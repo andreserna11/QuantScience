@@ -143,6 +143,30 @@
     	$("#btnAvanzado").attr("style","background-color: #1976D2 !important");     	
     }
     
+    function eCrypto(){
+    	$("#eGratuito").css({"display": "block"});    	
+    	$("#eBasico").css({"display": "none"});
+    	$("#eAvanzado").css({"display": "none"});
+    	$("#eFuturos").css({"display": "none"});
+    	$("#btnGratuito").attr("style","background-color: #1976D2 !important");
+    	$("#btnBasico").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnAvanzado").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnCryto").attr("style","background-color: #1976D2 !important");
+    	$("#btnFuturos").attr("style","background-color: #e0e0e0 !important");    	
+    }
+    
+    function eFuturos(){
+    	$("#eGratuito").css({"display": "none"});
+    	$("#eBasico").css({"display": "none"});
+    	$("#eAvanzado").css({"display": "none"});
+    	$("#eFuturos").css({"display": "block"});
+    	$("#btnGratuito").css({"display": "none"});
+    	$("#btnBasico").css({"display": "none"});
+    	$("#btnAvanzado").css({"display": "none"});
+    	$("#btnCryto").attr("style","background-color: #e0e0e0 !important");
+    	$("#btnFuturos").attr("style","background-color: #1976D2 !important");    	
+    }
+    
     function aceptarterms1(){     		
     	if($('#acceptTerms:checked').val()==1){
     		$('#continuarPasoPago').attr('disabled', false);
@@ -156,5 +180,29 @@
     		$('#continuarPasoPagoCoaching').attr('disabled', false);
     	}else{
     		$('#continuarPasoPagoCoaching').attr('disabled', true);
+    	}
+    }
+    
+    function aceptarterms3(){     		
+    	if($('#acceptTerms3:checked').val()==1){
+    		$('#btnEFuturo').attr('disabled', false);
+    	}else{
+    		$('#btnEFuturo').attr('disabled', true);
+    	}
+    }
+    
+    function aceptarterms4(){     		
+    	if($('#acceptTerms4:checked').val()==1){
+    		$('#btnC99').attr('disabled', false);
+    	}else{
+    		$('#btnC99').attr('disabled', true);
+    	}
+    }
+    
+    function aceptarterms5(){     		
+    	if($('#acceptTerms5:checked').val()==1){
+    		$('#btnC399').attr('disabled', false);
+    	}else{
+    		$('#btnC399').attr('disabled', true);
     	}
     }

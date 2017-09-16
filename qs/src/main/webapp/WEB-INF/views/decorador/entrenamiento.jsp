@@ -28,9 +28,14 @@
 <jsp:include page="../template/navBar.jsp" />
 	
 	<section>
-		<div class="container">	
-			<div class="row">
-				<h4 class="center">ENTRENAMIENTO DEL MERCADO DE CRYPTODIVISAS</h4>
+		<div class="container"><br>	
+			<div class="row">					
+				<div class="col s6 center">
+					<a id="btnCryto" class="waves-effect waves-light btn blue darken-2" onclick="eCrypto()">ENTRENAMIENTO DEL MERCADO DE CRYPTODIVISAS</a>
+				</div>
+				<div class="col s6 center">
+					<a id="btnFuturos" class="waves-effect waves-light btn grey lighten-2" onclick="eFuturos()">ENTRENAMIENTO DEL MERCADO DE FUTUROS</a>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col s4 center">
@@ -96,8 +101,14 @@
 
 		              </p>
 		              <br>		              
-		              <p class="center"><a href="https://payco.link/35528"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-					  <a class="center" href="https://payco.link/35528"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a></p>
+		              <p class="center"><a id="btnC99" href="https://payco.link/35528"  target="_blank" class="waves-effect waves-light btn blue darken-2" disabled>COMPRAR AHORA</a><br><br>
+					  <a><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a></p>
+					  <div class="row center">
+							<div class="col s12">							
+								<input type="checkbox" id="acceptTerms4" name="acceptTerms4" value="1" onclick="aceptarterms4();"/>Acepto los <ins>términos y condiciones</ins>
+								<!-- Se realizo modificacion en el materialize para poder mostrar el checkbox -->							
+							</div>
+					  </div>
 		            </div>
 		          </div>
 		        </div>
@@ -130,13 +141,63 @@
 		              </p>
 		              <br>
 		              <p class="center">
-					  	<a href="https://payco.link/35529"  target="_blank" class="waves-effect waves-light btn blue darken-2">COMPRAR AHORA</a><br><br>
-					<a href="https://payco.link/35529"  target="_blank"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
+					  	<a id="btnC399" href="https://payco.link/35529"  target="_blank" class="waves-effect waves-light btn blue darken-2" disabled>COMPRAR AHORA</a><br><br>
+						<a><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a>
+						<div class="row center">
+							<div class="col s12">							
+								<input type="checkbox" id="acceptTerms5" name="acceptTerms5" value="1" onclick="aceptarterms5();"/>Acepto los <ins>términos y condiciones</ins>
+								<!-- Se realizo modificacion en el materialize para poder mostrar el checkbox -->							
+							</div>
+					  	</div>
 					  </p>
 		            </div>
 		          </div>
 		        </div>
 		    </div>
+		</div>
+		
+		<div id="eFuturos" class="container">
+			<div class="row" >
+		        <div class="col s5">
+		          <div class="card grey lighten-4">
+		            <div class="card-content">
+		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
+		              <p style="text-align: justify; text-justify: inter-word;">En nuestro entrenamiento avanzado usted tiene la posibilidad de aprender la estrategia profesional con la que nuestros traders operan para obtener los mejores beneficios. En este entrenamiento usted aprenderá el manejo completo de la plataforma de inversión NinjaTrader, todas las herramientas de operación,  y la estrategia que se opera con el constante acompañamiento de nuestros profesionales.<br>
+						En nuestra academia nos diferenciamos ya que para nosotros lo mas importante es que nuestros estudiantes encuentren facilidad y adaptabilidad en el trading, es por eso que también los apoyamos y acompañamos en el desarrollo de sus propias estrategias.</p>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col s7">
+		          <div class="card grey lighten-4">
+		            <div class="card-content">
+		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>
+		              <p>
+		              	<ul>
+		              		<li>&#9679; Mercado de futuros</li>
+		              		<li>&#9679; Como crear una estrategia de trading</li>
+		              		<li>&#9679; Movimiento del mercado</li>
+		              		<li>&#9679; Tipos de movimientos direccionales</li>
+		              		<li>&#9679; Indicadores y su uso</li>
+		              		<li>&#9679; Operando la estrategia</li>
+		              		<li>&#9679; Métricas para la evaluación de una estrategia</li>
+		              		<li>&#9679; Gestión monetaria y de riesgo</li>		              		
+		              	</ul>
+		              </p>
+		              <br>
+		              <p class="center"><a id="btnEFuturo" href="https://payco.link/36813"  target="_blank" class="waves-effect waves-light btn blue darken-2" disabled>COMPRAR AHORA</a><br><br>
+					  <a class="center"><img  src="<c:url value='/resources/img/Precios/franquicias.png'/>"></a></p>
+			  			<div class="row center">
+							<div class="col s12">							
+								<input type="checkbox" id="acceptTerms3" name="acceptTerms3" value="1" onclick="aceptarterms3();"/>Acepto los <ins>términos y condiciones</ins>
+								<!-- Se realizo modificacion en el materialize para poder mostrar el checkbox -->							
+							</div>
+						</div>
+		            </div>
+		          </div>
+		        </div>
+		        <br>
+		        <br>
+		    </div>		    		   
 		</div>
 
 	</section>
