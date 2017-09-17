@@ -10,10 +10,4 @@
     		$('#loginModal').modal('open');
     	}
      });
-    $(document).ready(function(){
-    	if($('#loginModal')){
-    		$('#membresiaModal').modal('close');
-    	}
-    	$('#membresiaModal').modal('close');
-    });
 })(); 

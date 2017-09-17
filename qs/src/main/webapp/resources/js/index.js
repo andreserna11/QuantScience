@@ -1,5 +1,8 @@
 $('#btnRegistrar').on('click', function() {
-	registarUsuario();
+	if($('#registroForm input.valid').length === 5){
+		registarUsuario();
+		return false;
+	}
 });
 
 $('#btnContact').on('click', function() {
@@ -50,11 +53,6 @@ function registarUsuario() {
 		"id_membresia": membresia,
 		"estado": membresia === "1" ? true : false
 	}
-	if($('#nombreRegister').val() == "a"){
-		document.getElementById("nombreRegister").className="ErrorSolonum";
-		return false;
-	}
-	
 	
 	$.ajax({
 	       url:	'register',

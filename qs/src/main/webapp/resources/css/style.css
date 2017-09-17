@@ -38,6 +38,14 @@
 	margin-top: 10px !important;
 }
 
+.modal {
+	max-height: 100%;
+}
+
+.modal.modal-fixed-footer {
+    height: 85% !important;
+}
+
 /*Contacto*/
 #contact_us {
 	background-color: rgb(230, 233, 239);
@@ -46,6 +54,10 @@
 /**/
 .footer-qs-color {
 	background-color: rgb(2, 0, 32);
+}
+
+.p-t-10 {
+	padding-top: 10px !important;
 }
 
 .p-t-20 {
@@ -66,6 +78,10 @@
 
 .p-b-40 {
 	padding-bottom: 40px !important;
+}
+
+.m-b-0{
+	margin-bottom: 0px !important;
 }
 
 .sub:hover {
@@ -202,14 +218,6 @@ p {
 
 .contactLeft {
 	text-align: left;
-}
-
-.modal {
-	max-height: 80%;
-}
-
-.modal.modal-fixed-footer {
-	height: 80%;
 }
 
 .contactBackground {
@@ -373,6 +381,9 @@ p {
 	}
 	.cellContent {
 		width: 90px;
+	}
+	.modal {
+		top: 5% !important;
 	}
 }
 
