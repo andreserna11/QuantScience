@@ -27,32 +27,21 @@
 
 <jsp:include page="../template/navBar.jsp" />
 	
-	<section>
+	<section class="background-membresia">
 		<div class="container"><br>	
 			<div class="row">					
-				<div class="col s6 center">
-					<a id="btnCryto" class="waves-effect waves-light btn blue darken-2" onclick="eCrypto()">ENTRENAMIENTO DEL MERCADO DE CRYPTODIVISAS</a>
+				<div class="col s12 l6 center">
+					<a id="btnCryto" class="waves-effect waves-light btn blue darken-2" onclick="eCrypto()">MERCADO DE CRYPTODIVISAS</a>
 				</div>
-				<div class="col s6 center">
-					<a id="btnFuturos" class="waves-effect waves-light btn grey lighten-2" onclick="eFuturos()">ENTRENAMIENTO DEL MERCADO DE FUTUROS</a>
+				<div class="col s12 l6 center">
+					<a id="btnFuturos" class="waves-effect waves-light btn grey lighten-2" onclick="eFuturos()">MERCADO DE FUTUROS</a>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col s4 center">
+				<div class="col s12 l5 center">
 					<a id="btnGratuito" class="waves-effect waves-light btn blue darken-2" onclick="eGratuito()">Gratuito</a>
 				</div>
-				<div class="col s4 center">
-					<a id="btnBasico" class="waves-effect waves-light btn grey lighten-2" onclick="eBasico()">Básico</a>
-				</div>
-				<div class="col s4 center">
-					<a id="btnAvanzado" class="waves-effect waves-light btn grey lighten-2" onclick="eAvanzado()">Avanzado</a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container">
-			<div class="row" id="eGratuito">
-		        <div class="col s5">
+				<div id="eGratuito" class="col s12 l7">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
@@ -60,7 +49,26 @@
 		            </div>
 		          </div>
 		        </div>
-		        <div class="col s7">
+		        <div id="eBasico" class="col s12 l7">
+		          <div class="card grey lighten-4">
+		            <div class="card-content">
+		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
+		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional, adquiriendo los conocimientos básicos del trading en cryptodivisas</p>
+		            </div>
+		          </div>
+		        </div>
+		        <div id="eAvanzado" class="col s12 l7">
+		          <div class="card grey lighten-4">
+		            <div class="card-content">
+		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
+		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional con las mismas estrategias que son utilizadas por nuestros traders para operar los fondos privados de la compañía. Al finalizar este entrenamiento el estudiante estará en capacidad de entender y operar el mercado de las cryptomonedas de manera profesional conociendo el manejo de las plataformas y el desarrollo de estrategias de inversión.</p>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col s12 l5 center">
+					<a id="btnBasico" class="waves-effect waves-light btn grey lighten-2" onclick="eBasico()">Básico</a>
+				</div>
+		        <div id="eGratuito-T" class="col s12 l7">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>
@@ -75,19 +83,7 @@
 		            </div>
 		          </div>
 		        </div>
-		        <br>
-		        <br>
-		    </div>
-		    <div class="row" id="eBasico">
-		        <div class="col s5">
-		          <div class="card grey lighten-4">
-		            <div class="card-content">
-		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
-		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional, adquiriendo los conocimientos básicos del trading en cryptodivisas</p>
-		            </div>
-		          </div>
-		        </div>
-		        <div class="col s7">
+		        <div id="eBasico-T" class="col s12 l7">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>
@@ -112,17 +108,7 @@
 		            </div>
 		          </div>
 		        </div>
-		    </div>
-		    <div class="row" id="eAvanzado">
-		        <div class="col s5">
-		          <div class="card grey lighten-4">
-		            <div class="card-content">
-		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
-		              <p style="text-align: justify; text-justify: inter-word;">Entrenamiento que tiene como objetivo que nuestros estudiantes aprendan a operar en el mercado de las cryptodivisas de manera profesional con las mismas estrategias que son utilizadas por nuestros traders para operar los fondos privados de la compañía. Al finalizar este entrenamiento el estudiante estará en capacidad de entender y operar el mercado de las cryptomonedas de manera profesional conociendo el manejo de las plataformas y el desarrollo de estrategias de inversión.</p>
-		            </div>
-		          </div>
-		        </div>
-		        <div class="col s7">
+		        <div id="eAvanzado-T" class="col s12 l7">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>
@@ -153,12 +139,15 @@
 		            </div>
 		          </div>
 		        </div>
-		    </div>
+				<div class="col s12 l5 center">
+					<a id="btnAvanzado" class="waves-effect waves-light btn grey lighten-2" onclick="eAvanzado()">Avanzado</a>
+				</div>
+			</div>
 		</div>
 		
 		<div id="eFuturos" class="container">
 			<div class="row" >
-		        <div class="col s5">
+		        <div class="col s12 l5">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
@@ -167,7 +156,7 @@
 		            </div>
 		          </div>
 		        </div>
-		        <div class="col s7">
+		        <div class="col s12 l7">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>

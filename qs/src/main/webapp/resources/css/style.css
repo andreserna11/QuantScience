@@ -87,17 +87,17 @@
 	text-decoration: underline;
 }
 
-#eBasico, #eAvanzado, #eFuturos{
+#eBasico, #eBasico-T, #eAvanzado, #eAvanzado-T, #eFuturos{
 	display: none;
 }
 
-#eGratuito {
+/*#eGratuito {
 	margin-bottom: 148px;
 }
 
 #eBasico {
 	margin-bottom: 40px;
-}
+}*/
 
 #p700 {
 	width: 700px;

@@ -35,8 +35,8 @@
 		</div>
 		
 		<div class="container">
-			<div class="row" id="eFuturos">
-		        <div class="col s5">
+			<div class="row" id="eFuturos-e">
+		        <div class="col s12 l5">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>DESCRIPCIÓN DEL ENTRENAMIENTO</b></span>
@@ -45,7 +45,7 @@
 		            </div>
 		          </div>
 		        </div>
-		        <div class="col s7">
+		        <div class="col s12 l7">
 		          <div class="card grey lighten-4">
 		            <div class="card-content">
 		              <span class="card-title"><b>TEMAS DEL ENTRENAMIENTO</b></span>
